@@ -58,7 +58,7 @@ button {
   padding: 2rem;
   text-align: center;
   color: rgb(255, 255, 255);
-  background-image: url("/imgs/palmtrees.jpg");
+  background-image: url("./imgs/palmtrees.jpg");
 }
 
 .title {
@@ -67,4 +67,3 @@ button {
   font-weight: bold;
   color: #bdc093;
 }
-
