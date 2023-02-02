@@ -1,11 +1,8 @@
-
- #map {
+#map {
   display: flex;
-  height: 35%;
-  width: 25%;
+  height: 50%
 }
 
-html,
 body {
   height: 100%;
   margin: 0;
@@ -52,12 +49,15 @@ nav a:hover {
   color: #1E90FF;
 }
 
-main {
+.bg_img {
   padding: 2rem;
   text-align: center;
-  color: white;
-  background-image: url("https://i.pinimg.com/originals/d5/8c/6e/d58c6ef83d6d374ab3fff6224b36a2ae.jpg");
+  color: rgb(255, 255, 255);
+  background-image: url("/imgs/palmtrees.jpg");
+
+
 }
+
 body {
   font-family: Arial, sans-serif;
   background-color: #F2F2F2;
@@ -68,7 +68,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #FFFFFF;
+  background-color: #535756;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,7 +76,7 @@ header {
   margin: 0;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #3F3F3F;
+  color: bdc093;
 }
 
 nav ul {
@@ -90,7 +90,8 @@ nav a {
   padding: 1rem;
   font-size: 1.25rem;
   font-weight: bold;
-  color: #3F3F3F;
+  color: bdc093;
+  ;
   text-decoration: none;
 }
 
@@ -98,3 +99,8 @@ nav a:hover {
   color: #1E90FF;
 }
 
+button {
+  border-radius: 20px;
+  border-color: none;
+  height: 30px;
+}
