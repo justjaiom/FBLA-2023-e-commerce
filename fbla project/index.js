@@ -12,7 +12,14 @@ function initMap() {
     title: "The Living Room",
   });
 
-  const content_string = 'The Living Room'
+  const content_string = 
+  '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">The Living Room</h1>' +
+    '<div id="bodyContent">' + 
+    "<p> 120 W 4th St Austin, TX 78701 </p>"
+
   const infowindow = new google.maps.InfoWindow({
     content: content_string,
   });
