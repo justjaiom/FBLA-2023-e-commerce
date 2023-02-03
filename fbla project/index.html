@@ -24,27 +24,42 @@
     </div>
 
     <div id="container">
-      <button><b>Room, 1 Guest</b></button>
+      <button><b>1 Room, 1 Guest</b></button>
       <button><b>Special Rates</b></button>
       <button class="color"><b>Check Rooms & Rates</b></button>
     </div>
 
-    <div class="slider-container">
-      <div class="menu">
-        <label for="slide-dot-1"></label>
-        <label for="slide-dot-2"></label>
-        <label for="slide-dot-3"></label>
-      </div>
-      <div>
-        <input id="slide-dot-1" type="radio" name="slides" checked />
-        <div class="slide slide-1"></div>
-        <input id="slide-dot-2" type="radio" name="slides" />
-        <div class="slide slide-2"></div>
-        <input id="slide-dot-3" type="radio" name="slides" />
-        <div class="slide slide-3"></div>
-      </div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container" style="margin-top: 40px">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="imgs/img1.jpeg" style="width: 100%" />
+        <div class="text">Bed Room 1</div>
       </div>
 
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="imgs/img2.jpeg" style="width: 100%" />
+        <div class="text">Bed Room 2</div>
+      </div>
 
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="imgs/img3.jpeg" style="width: 100%" />
+        <div class="text">Court Yard </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>

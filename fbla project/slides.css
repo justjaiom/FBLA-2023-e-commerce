@@ -1,64 +1,84 @@
-img {
-    max-width: 100%;
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: black;;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
   }
-  .slider-container {
-    min-height: 400px;
-    min-width: 90%;
-    position: absolute;
-    overflow: hidden;
-    text-align: center;
-    display: block;
-    margin-left: 5%;
-    margin-right: 5%;
+
+  to {
+    opacity: 1
   }
-  .slider-container div {
-    min-width: 100%;
-    min-height: 100%;
-  }
-  .menu {
-    position: absolute;
-    top: 90%;
-    left: 0;
-    z-index: 900;
-    width: 100%;
-    bottom: 0;
-  }
-  .menu label {
-    cursor: pointer;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: #fff;
-    border-radius: 50px;
-    margin: 0 0.2em 1em;
-  }
-  .menu label:hover,
-  .menu label:focus {
-    background: #1c87c9;
-  }
-  .slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: 10;
-    padding: 8em 1em 0;
-    background-size: cover;
-    background-position: 50% 50%;
-    transition: left 0s 0.75s;
-  }
-  [id^="slide"]:checked + .slide {
-    left: 0;
-    z-index: 100;
-    transition: left 0.65s ease-out;
-  }
-  .slide-1 {
-    background-image: url("imgs/img1.jpeg");
-  }
-  .slide-2 {
-    background-image: url("imgs/img2.jpeg");
-  }
-  .slide-3 {
-    background-image: url("imgs/img3.jpeg");
-  }
+}
