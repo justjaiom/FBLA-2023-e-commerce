@@ -1,7 +1,7 @@
 let map;
 
 function initMap() {
-  const the_living_room = { lat: 30.266473, lng: -97.744242 };
+  const the_living_room = { lat: 29.282981, lng: -94.800104 };
   map = new google.maps.Map(document.getElementById("map"), {
     center: the_living_room,
     zoom: 13,
