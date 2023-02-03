@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="rooms.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slides.css" />
     <script type="module" src="./rooms.js"></script>
   </head>
   <body>
@@ -26,47 +27,112 @@
       <h1>Availible Rooms</h1>
     </div>
 
-    <div class="t">
-      <body>
-        <div class="contianer">
-          <div class="calendar">
-            <div class="calendar-header">
-              <span class="month-picker" id="month-picker"> May </span>
-              <div class="year-picker" id="year-picker">
-                <span class="year-change" id="pre-year">
-                  <pre><</pre>
-                </span>
-                <span id="year">2023 </span>
-                <span class="year-change" id="next-year">
-                  <pre>></pre>
-                </span>
+    <div class="float_left">
+      <div class="contianer">
+        <div class="calendar">
+          <div class="calendar-header">
+            <span class="month-picker" id="month-picker"> May </span>
+            <div class="year-picker" id="year-picker">
+              <span class="year-change" id="pre-year">
+                <pre><</pre>
+              </span>
+              <span id="year">2023 </span>
+              <span class="year-change" id="next-year">
+                <pre>></pre>
+              </span>
+            </div>
+          </div>
+
+          <div class="calendar-body">
+            <div class="calendar-week-days">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="calendar-days"></div>
+          </div>
+          <div class="calendar-footer"></div>
+          <div class="date-time-formate">
+            <div class="day-text-formate">TODAY</div>
+            <div class="date-time-value">
+              <div class="time-formate">02:51:20</div>
+              <div class="date-formate">23 - july - 2022</div>
+            </div>
+          </div>
+          <div class="month-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="float_left">
+      <div class="contianer" style="margin-left: 15px">
+        <div class="room_piker">
+          <div
+            class="room_picker_header"
+            style="
+              text-align: center;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            Choose room
+          </div>
+          <div class="room_picker_body">
+            <div class="slideshow-container" style="margin-top: 40px">
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="imgs/img1.jpeg" style="width: 100%" />
+                <div class="text">Bed Room 1</div>
               </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="imgs/img2.jpeg" style="width: 100%" />
+                <div class="text">Bed Room 2</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="imgs/img3.jpeg" style="width: 100%" />
+                <div class="text">Court Yard</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="imgs/img4.jpg" style="width: 100%" />
+                <div class="text">Court Yard</div>
+              </div>
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="imgs/img5.jpg" style="width: 100%" />
+                <div class="text">Court Yard</div>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
 
-            <div class="calendar-body">
-              <div class="calendar-week-days">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-              </div>
-              <div class="calendar-days"></div>
+            <!-- The dots/circles -->
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
             </div>
-            <div class="calendar-footer"></div>
-            <div class="date-time-formate">
-              <div class="day-text-formate">TODAY</div>
-              <div class="date-time-value">
-                <div class="time-formate">02:51:20</div>
-                <div class="date-formate">23 - july - 2022</div>
-              </div>
-            </div>
-            <div class="month-list"></div>
+            <script src="slideshow.js"></script>
           </div>
         </div>
-      </body>
+      </div>
+    </div>
+
+
+    <div class="extra">
+
     </div>
   </body>
 </html>

@@ -28,7 +28,7 @@
     height: max-content;
     position: relative;
     display: flex;
-    padding: 2% 0px 0px 0px;
+    padding: 22px 0px 0px 0px;
     justify-content: center;
     top: 10%;
     right: 0%;
@@ -295,3 +295,30 @@
       margin: 5px 0px;
     }
   }
+
+  .float_left{
+    float: left;
+  }
+
+.room_piker{
+    height: 610px;
+    width: max-content;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 30px 50px 0px 50px;
+}
+
+.room_picker_header{
+    background: #535756;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: var(--white);
+    padding: 10px;
+}
+.room_picker_body {
+    pad: 10px;
+  }
+  
