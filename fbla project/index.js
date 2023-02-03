@@ -18,7 +18,7 @@ function initMap() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">The Living Room</h1>' +
     '<div id="bodyContent">' +
-    "<p> 120 W 4th St Austin, TX 78701 </p>";
+    "<p> 2402 Avenue Q 1/2, Galveston, TX 77550 </p>";
 
   const infowindow = new google.maps.InfoWindow({
     content: content_string,
