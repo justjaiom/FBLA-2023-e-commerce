@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+
 #map {
   display: flex;
   height: 70%;
@@ -10,15 +13,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #F2F2F2;
+  font-family: 'Lato', sans-serif;
+  background-color: #e2d2b8;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #F2F2F2;
-}
 
 header {
   display: flex;

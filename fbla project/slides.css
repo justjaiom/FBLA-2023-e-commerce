@@ -1,3 +1,7 @@
+.body{
+  font-family: 'Lato', sans-serif;
+}
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -35,6 +39,7 @@
 }
 
 .text {
+  font-family: 'Lato', sans-serif;
   color: black;;
   font-size: 15px;
   padding: 8px 12px;
