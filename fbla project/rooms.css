@@ -320,5 +320,44 @@
 }
 .room_picker_body {
     pad: 10px;
+
   }
   
+.extra{
+    height: 610px;
+    width: max-content;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 30px 50px 0px 50px;
+}
+
+.extra_header{
+    background: #535756;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: var(--white);
+    padding: 10px;
+}
+
+.extra_body {
+    pad: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .features{
+    display: block;
+    
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: #535756 solid;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #e2d2b8;
+    margin-left: auto;
+    margin-right: auto;
+  }
