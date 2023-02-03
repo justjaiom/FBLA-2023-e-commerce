@@ -4,7 +4,7 @@
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="stylesheet" type="text/css" href="./info.css" />
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="info.js"></script>
   </head>
   <body>
     <header>
@@ -42,7 +42,39 @@
         <input type="submit" value="Submit" id="input-submit" />
       </form>
     </div>
-    <div class="float_right"><img src="imgs/map_img.png" alt="" /></div>
+    <div>
+
+      <div id="style-selector-control" class="map-control">
+        <input
+          type="radio"
+          name="show-hide"
+          id="hide-poi"
+          class="selector-control"
+        />
+        <label for="hide-poi">Hide</label>
+        <input
+          type="radio"
+          name="show-hide"
+          id="show-poi"
+          class="selector-control"
+          checked="checked"
+        />
+        <label for="show-poi">Show</label>
+      </div>
+      <div id="map"></div>
+  
+      <!-- 
+        The `defer` attribute causes the callback to execute after the full HTML
+        document has been parsed. For non-blocking uses, avoiding race conditions,
+        and consistent behavior across browsers, consider loading using Promises
+        with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+        -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5W9FAmJM24VNxJQZoMhjCfUw3snG2LGA&callback=initMap&v=weekly"
+        defer
+      ></script>
+
+    </div>
     <div id="thanks">thankyou</div>
   </body>
 </html>

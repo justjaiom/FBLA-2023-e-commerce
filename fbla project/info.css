@@ -97,8 +97,42 @@ form input[type="submit"] {
     width: 100px;
     background-color: #535756;
     color: #e2d2b8;
-    margin-top: 40vh;
     padding: 10px;
     border-radius: 25px;
 
 }
+
+#map {
+    height: 50%;
+    width: 50%;
+    max-height: 400px;
+  }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  
+  .map-control {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+    font-family: "Roboto", "sans-serif";
+    margin: 10px;
+    padding-right: 5px;
+    visibility: hidden;
+    /* Hide the control initially, to prevent it from appearing
+             before the map loads. */
+    display: none;
+  }
+  
+  /* Display the control once it is inside the map. */
+  #map .map-control {
+    display: block;
+  }
+  
+  .selector-control {
+    font-size: 14px;
+    line-height: 30px;
+    vertical-align: baseline;
+  }
+
