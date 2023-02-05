@@ -87,5 +87,9 @@ justify-content: center;
   font-weight: 700;
 }
 
+.alert{
+  background-color: #535756;
+  color: #F2F2F2;
+}
 
 

@@ -64,6 +64,11 @@
   overflow: hidden;
   z-index: 1;
 }
+.button:active {
+  background-color: red;
+  content-visibility: visible;
+}
+
 .button:after {
   content: "";
   position: absolute;
@@ -94,13 +99,11 @@
   
   opacity: 0;
 }
-.button:hover {
-  color: #fff;
-  
-}
+
 .button:hover:before {
   width: 100%;
 }
+
 
 .numbertext {
   color: #f2f2f2;
