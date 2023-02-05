@@ -25,6 +25,7 @@ body {
     background: #e2d2b8;
 }
 
+
 .contianer {
     width: max-content;
     position: relative;
@@ -356,15 +357,35 @@ body {
     padding: 30px 50px 0px 50px;
 }
 
+.room_picker_heading {
+    width: max-content;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 30px 50px 0px 50px;
+}
+
 .room_picker_header {
-    background: #535756;
+    background: #e2d2b8;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 700;
-    color: var(--white);
+    color: #535756;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.room_img_title {
+    background: #535756;
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: 700;
+    color: #bdc093;
     padding: 10px;
 }
+
 
 .room_picker_body {
     pad: 10px;
