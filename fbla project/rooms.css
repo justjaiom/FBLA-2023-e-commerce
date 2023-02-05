@@ -371,29 +371,6 @@ body {
 
 }
 
-.extra {
-    width: max-content;
-    background-color: white;
-    border-radius: 25px;
-    padding: 30px 50px 30px 50px;
-}
-
-.extra_header {
-    background: #535756;
-    display: block;
-    justify-content: space-between;
-    text-align: center;
-    margin: auto;
-    font-weight: 700;
-    color: var(--white);
-    padding: 10px;
-}
-
-.extra_body {
-    pad: 10px;
-    justify-content: center;
-    align-items: center;
-}
 
 .features {
 
