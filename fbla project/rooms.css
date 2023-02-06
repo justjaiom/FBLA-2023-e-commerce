@@ -498,6 +498,7 @@ body {
 
 .learn-more, .add-to-cart {
   align-items: center;
+  text-decoration: none;
   appearance: none;
   background-color: #535756;
   margin-top: 10px;
