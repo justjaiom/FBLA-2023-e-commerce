@@ -86,11 +86,11 @@ function displayCart() {
     Object.values(cartItems).map((item) => {
       console.log(item);
       productContainer.innerHTML += `
-        <div class="products">
+        <div class="products" style="margin-left: 80px">
             <img src='./imgs/${item.tag}.jpg'/>
             <span>${item.name}</span>
         </div>
-        <div class='quantity'>${item.incart}</div>
+        <div class='quantity' style="text-align: center">${item.incart}</div>
         <div class='price'>$${item.price}.00</div>
 
 
