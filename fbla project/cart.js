@@ -91,7 +91,7 @@ function displayCart() {
             <span>${item.name}</span>
         </div>
         <div class='quantity' style="text-align: center">${item.incart}</div>
-        <div class='price'>$${item.price}.00</div>
+        <div class='price' style="text-align: center">$${item.price}.00</div>
 
 
         `;
