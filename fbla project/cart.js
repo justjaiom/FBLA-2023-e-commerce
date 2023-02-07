@@ -88,7 +88,7 @@ function displayCart() {
       productContainer.innerHTML += `
         <div class="products" style="margin-left: 80px">
             <img src='./imgs/${item.tag}.jpg'/>
-            <span>${item.name}</span>
+            <span class="change">${item.name}</span>
         </div>
         <div class='quantity' style="text-align: center">${item.incart}</div>
         <div class='price' style="text-align: center">$${item.price}.00</div>
