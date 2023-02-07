@@ -77,21 +77,31 @@ function totalCost(product) {
 function displayCart() {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
-  console.log(cartItems)
+  console.log(cartItems);
   let productContainer = document.querySelector(".container");
+  let cartCost = localStorage.getItem("totalCost");
+  let total = document.querySelector(".total");
   if (cartItems && productContainer) {
-    productContainer.innerHTML = '';
-    Object.values(cartItems).map(item => {
-        console.log(item)
-        productContainer.innerHTML += `
+    productContainer.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      console.log(item);
+      productContainer.innerHTML += `
         <div class="products">
-            <ion-icon name="close-circle-outline"></ion-icon>
-            <img src='./imgs/${item.tag}.jpg'>
+            <img src='./imgs/${item.tag}.jpg'/>
             <span>${item.name}</span>
         </div>
-        <div class='price'>$${item.price}</div>
-        `
-    })
+        <div class='quantity'>${item.incart}</div>
+        <div class='price'>$${item.price}.00</div>
+
+
+        `;
+
+    });
+
+    total.innerHTML += `
+<div class='total'>$${cartCost}.00</div>
+    
+    `
   }
 }
 
