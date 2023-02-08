@@ -586,7 +586,7 @@ body {
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
 }
 @media(min-width: 768px){
-    .book-form{
+    .book-form {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 24px;
     }
