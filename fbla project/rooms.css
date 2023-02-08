@@ -550,6 +550,10 @@ body {
     background: #535756 ;
     color: #fff;
     padding: 40px 60px;
+    margin: 20;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 30px 50px 0px 50px;
 }
 .book-form{
     display: grid;
