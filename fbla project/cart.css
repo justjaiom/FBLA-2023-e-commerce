@@ -8,6 +8,12 @@
     float: left;
 
 }
+.date_container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    text-align: center;
+
+}
 .parent{
 
     background-color: white;
@@ -37,3 +43,10 @@
         display: block;
      }
     } 
+
+
+
+    .center{
+        display: inline;
+        
+    }

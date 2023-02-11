@@ -109,7 +109,7 @@
           </div>
         </div> -->
         <div class = "book">
-          <form class = "book-form">
+          <form class = "book-form" onsubmit="setdate(event)">
               <div class = "form-item">
                   <label for = "checkin-date">Check In Date: </label>
                   <input type = "date" id = "chekin-date">
@@ -118,8 +118,9 @@
                   <label for = "checkout-date">Check Out Date: </label>
                   <input type = "date" id = "chekout-date">
               </div>
+              <input type="submit" value="submit"/>
           </form>
-      </div>
+        </div>
         <div style="text-align: center;">
           could potentialy have an offers section here
         </div>
