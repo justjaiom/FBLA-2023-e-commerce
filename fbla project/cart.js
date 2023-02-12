@@ -9,13 +9,13 @@ let products = [
   },
   {
     name: "2 room 1 bed",
-    tag: "img2.2",
+    tag: "img3.3",
     price: 90,
     incart: 0,
   },
   {
     name: "suite",
-    tag: "img3.3",
+    tag: "img2.2",
     price: 120,
     incart: 0,
   },

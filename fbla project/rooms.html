@@ -6,8 +6,6 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="rooms.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="slides.css" />
     <script type="module" src="./rooms.js"></script>
   </head>
   <body>
@@ -28,150 +26,125 @@
       <h1>Book Your Rooms</h1>
     </div>
 
-    <div class="section group">
-      <div class="col span_1_of_2">
-        <div class="contianer">
-          <div class="room_picker_header">
-            Choose Your Rooms
-          </div>
-        </div>
+    
 
-      </div>
-      <div class="col span_2_of_2">
-        <div class="contianer">
-          <div class="room_picker_header">
-            Choose the dates you will be staying
+    <div class = "book">
+      <form class = "book-form" onsubmit="setdate(event)">
+          <div class = "form-item">
+              <label for = "checkin-date">Check In Date: </label>
+              <input type = "date" id = "chekin-date">
           </div>
-        </div>
-      </div>
-    </div>
-    <div>
-    <div class="section group">
-      <div class="col span_1_of_2">
-        <div class="contianer">
-          <div class="room_piker">
-            <div class="room_img_title"">1 Bed 1 Room</div>
-            <img src="imgs/img1.1.webp" alt=" one Bed One" style="width: 100%;">
-            <div class="subheading">
-              <div class="price">
-                $70/Day
-              </div>
-              <div>
-                <button href="#" class="add-to-cart">Add to cart</button>
+          <div class = "form-item">
+              <label for = "checkout-date">Check Out Date: </label>
+              <input type = "date" id = "chekout-date">
+          </div>
+          
+          <div class = "form-item">
+              <input type = "submit" class = "btn" value = "Book Now">
+          </div>
+          <div class = "form-item">
+              <input type = "reset" class = "btn" value = "Reset">
+          </div>
+      </form>
+  </div>
 
-              </div>
-              <div>
-                <button class="learn-more">Learn More</button>
-              </div>
-              <div>discription</div>
-            </div>
-            
-          </div>
-        </div>
+  <section class = "rooms sec-width" id = "rooms">
+      <div class = "title">
+          <h2>rooms</h2>
       </div>
-      <div class="col span_2_of_2">
-        <!-- <div class="contianer">
-          <div class="calendar">
-            <div class="calendar-header">
-              <span class="month-picker" id="month-picker"> May </span>
-              <div class="year-picker" id="year-picker">
-                <span class="year-change" id="pre-year">
-                  <pre><</pre>
-                </span>
-                <span id="year">2023 </span>
-                <span class="year-change" id="next-year">
-                  <pre>></pre>
-                </span>
+      <div class = "rooms-container">
+          <!-- single room -->
+          <article class = "room">
+              <div class = "room-image">
+                  <img src = "images/img2.jpg" alt = "room image">
               </div>
-            </div>
-
-            <div class="calendar-body">
-              <div class="calendar-week-days">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
+              <div class = "room-text">
+                  <h3>1 Bed 1 Room</h3>
+                  <ul>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore, atque quo?</p>
+                  <p class = "rate">
+                      <span>$69.00 /</span> Per Night
+                  </p>
+                  <button type = "button" class = "btn add-to-cart">book now</button>
               </div>
-              <div class="calendar-days""></div>
-            </div>
-            <div class="calendar-footer"></div>
-            <div class="date-time-formate">
-              <div class="day-text-formate">TODAY</div>
-              <div class="date-time-value">
-                <div class="time-formate">02:51:20</div>
-                <div class="date-formate">23 - july - 2022</div>
+          </article>
+          <!-- end of single room -->
+          <!-- single room -->
+          <article class = "room">
+              <div class = "room-image">
+                  <img src = "images/img1.jpg" alt = "room image">
               </div>
-            </div>
-            <div class="month-list"></div>
-          </div>
-        </div> -->
-        <div class = "book">
-          <form class = "book-form" onsubmit="setdate(event)">
-              <div class = "form-item">
-                  <label for = "checkin-date">Check In Date: </label>
-                  <input type = "date" id = "chekin-date">
+              <div class = "room-text">
+                  <h3>2 Beed 2 Room</h3>
+                  <ul>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore, atque quo?</p>
+                  <p class = "rate">
+                      <span>$99.00 /</span> Per Night
+                  </p>
+                  <button type = "button" class = "btn add-to-cart">book now</button>
               </div>
-              <div class = "form-item">
-                  <label for = "checkout-date">Check Out Date: </label>
-                  <input type = "date" id = "chekout-date">
+          </article>
+          <!-- end of single room -->
+          <!-- single room -->
+          <article class = "room">
+              <div class = "room-image">
+                  <img src = "images/img3.jpg" alt = "room image">
               </div>
-              <input type="submit" value="Submit" />
-              <input type="reset" value="Reset" />
-          </form>
-        </div>
-        <div style="text-align: center;">
-          could potentialy have an offers section here
-        </div>
+              <div class = "room-text">
+                  <h3> Full Suite (2 Bed, 1 Bed Room, 1 Living Room)</h3>
+                  <ul>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                      <li>
+                          <i class = "fas fa-arrow-alt-circle-right"></i>
+                          Lorem ipsum dolor sit amet.
+                      </li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem repellendus maxime ullam tempore architecto provident unde expedita quam beatae, dolore eligendi molestias sint tenetur incidunt voluptas. Unde corporis qui iusto vitae. Aut nesciunt id iste, cum esse commodi nemo?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla corporis quasi officiis cumque, fugiat nostrum sunt, tempora animi dicta laborum beatae ratione doloremque. Delectus odio sit eius labore, atque quo?</p>
+                  <p class = "rate">
+                      <span>$119.00 /</span> Per Night
+                  </p>
+                  <button type = "button" class = "btn add-to-cart">book now</button>
+              </div>
+          </article>
+          <!-- end of single room -->
       </div>
-    </div>
-
-    <div class="section group">
-      <div class="col span_1_of_2">
-        <div class="contianer">
-          <div class="room_piker">
-            <div class="room_img_title" >2 Bed 1 Room</div>
-            <img src="imgs/img3.3.webp" style="width: 100%;">
-            <div class="subheading">
-              <div class="price">
-                $90/Day
-              </div>
-              <div>
-                <button href="#" class="add-to-cart">Add to cart</button>
-              </div>
-              <div>
-                <button class="learn-more">Learn More</button>
-              </div>
-              <div>discription</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section group">
-      <div class="col span_1_of_2">
-        <div class="contianer">
-          <div class="room_piker">
-            <div class="room_img_title"">Full Suite (2 Bed, 1 Bed Room, 1 Living Room)</div>
-            <img src="imgs/img2.2.webp"style="width: 100%;">
-            <div class="subheading">
-              <div class="price">
-                $120/Day
-              </div>
-              <div>
-                <button href="#" class="add-to-cart">Add to cart</button>
-              </div>
-              <div>
-                <button class="learn-more">Learn More</button>
-              </div>
-              <div>discription</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  </section>
   </body>
   <script src="rooms.js"></script>
   <script src="cart.js"></script>
