@@ -1,5 +1,6 @@
 let cart = document.querySelectorAll(".add-to-cart");
 
+
 let products = [
   {
     name: "1 room 1 bed",
@@ -111,28 +112,26 @@ function refreshPage(){
 function setdate(event) {
   event.preventDefault();
   var checkin_date = document.getElementById("chekin-date").value;
-  localStorage.setItem("checkin-date", checkin_date);
+  localStorage.setItem("checkin_date", checkin_date);
   var checkout_date = document.getElementById("chekout-date").value;
-  localStorage.setItem("checkout-date", checkout_date);
+  localStorage.setItem("checkout_date", checkout_date);
 }
 
 function displayDate() {
-  let checkin_date = localStorage.getItem("checkin-date");
-  let checkout_date = localStorage.getItem("checkout-date");
+  let checkin_date = localStorage.getItem("checkin_date");
+  let checkout_date = localStorage.getItem("checkout_date");
   console.log(checkout_date);
   console.log(checkin_date);
   let date_container = document.querySelector(".date_container");
   let checkin = document.querySelector(".checkin");
   let checkout = document.querySelector(".checkout");
-  checkin.innerHTML = "";
-  checkout.innerHTML = "";
 
 
-  if (checkin_date == null || undefined) {
-    checkin.innerHTML = `
+
+  if ( checkin_date === '') {
+    checkin.innerHTML += `
     <form class = "book-form" onsubmit="setdate(event)">
     <div class = "form-item">
-                  <label for = "checkin-date">Check In Date: </label>
                   <input type = "date" id = "chekin-date">
                   <input type="submit"  onClick=refreshPage() value="submit "/>
               </div>
@@ -140,30 +139,38 @@ function displayDate() {
   `;
   } 
   
-  if (checkin_date != null || undefined) {
+  if (checkin_date) {
     checkin.innerHTML += `
-    <div class="center"> checkin date: &nbsp ${checkin_date}</div>
+    <div>${checkin_date}</div>
     `;
   }
 
-  if (checkout_date == null || undefined) {
-    checkout.innerHTML = `
+  if (checkout_date === '') {
+    checkout.innerHTML += `
     <form class = "book-form" onsubmit="setdate(event)">
     <div class = "form-item">
-                  <label for = "checkout-date">Check Out Date: </label>
                   <input type = "date" id = "chekout-date">
                   <input type="submit"  onClick=refreshPage() value="submit "/>
               </div>
     </form>
   `;
   } 
-  if (checkout_date != null || undefined) {
+  if (checkout_date) {
         checkout.innerHTML += `
-  <div class="center" > checkout date: &nbsp ${checkout_date}</div>
+  <div>  ${checkout_date}</div>
   `;
   }
 }
 
 displayDate();
 
-console.log(typeof(checkout_date))
+
+
+function cleardate() {
+  localStorage.checkin_date = ''
+  localStorage.checkout_date = ''
+}
+
+function refreshPage() {
+  window.location.reload();
+}

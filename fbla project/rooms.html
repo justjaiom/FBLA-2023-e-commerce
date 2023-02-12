@@ -31,11 +31,11 @@
     <div class = "book">
       <form class = "book-form" onsubmit="setdate(event)">
           <div class = "form-item">
-              <label for = "checkin-date">Check In Date: </label>
-              <input type = "date" id = "chekin-date">
+              <label for = "checkin_date">Check In Date: </label>
+              <input type = "date" id = "chekin-date" >
           </div>
           <div class = "form-item">
-              <label for = "checkout-date">Check Out Date: </label>
+              <label for = "checkout_date">Check Out Date: </label>
               <input type = "date" id = "chekout-date">
           </div>
           
@@ -43,7 +43,7 @@
               <input type = "submit" class = "btn" value = "Book Now">
           </div>
           <div class = "form-item">
-              <input type = "reset" class = "btn" value = "Reset">
+              <input type = "reset" class = "btn" value = "Reset" onclick="cleardate()">
           </div>
       </form>
   </div>

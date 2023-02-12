@@ -30,8 +30,11 @@ body{
     cursor: pointer;
     transition: var(--transition);
 }
-.btn:hover{
-    opacity: 0.85;
+
+
+.btn:active {
+    background-color: #535756;
+    transition: 20ms;
 }
 .flex{
     display: flex;
@@ -233,7 +236,7 @@ img{
     font-size: 17px;
     border: none;
 }
-.book-form input:focus{
+.book-form input:active{
     outline: 0;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
 }
