@@ -104,6 +104,10 @@ function displayCart() {
 
 displayCart();
 
+function refreshPage(){
+  window.reload();
+} 
+
 function setdate(event) {
   event.preventDefault();
   var checkin_date = document.getElementById("chekin-date").value;
@@ -122,29 +126,44 @@ function displayDate() {
   let checkout = document.querySelector(".checkout");
   checkin.innerHTML = "";
   checkout.innerHTML = "";
-  if (checkin != null) {
-    checkin.innerHTML += `
-  <div class="center"> checkin date: &nbsp ${checkin_date}</div>
-  `;
-  }
 
-  if (checkout != null) {
-    checkout.innerHTML += `
-  <div class="center" > checkout date: &nbsp ${checkout_date}</div>
-  `;
-  }
 
-  if (checkin_date == null) {
+  if (checkin_date == null || undefined) {
     checkin.innerHTML = `
-  <input type="date"></input>
+    <form class = "book-form" onsubmit="setdate(event)">
+    <div class = "form-item">
+                  <label for = "checkin-date">Check In Date: </label>
+                  <input type = "date" id = "chekin-date">
+                  <input type="submit"  onClick=refreshPage() value="submit "/>
+              </div>
+    </form>
   `;
+  } 
+  
+  if (checkin_date != null || undefined) {
+    checkin.innerHTML += `
+    <div class="center"> checkin date: &nbsp ${checkin_date}</div>
+    `;
   }
 
-  if (checkout_date == null) {
+  if (checkout_date == null || undefined) {
     checkout.innerHTML = `
-  <input type="date"></input>
+    <form class = "book-form" onsubmit="setdate(event)">
+    <div class = "form-item">
+                  <label for = "checkout-date">Check Out Date: </label>
+                  <input type = "date" id = "chekout-date">
+                  <input type="submit"  onClick=refreshPage() value="submit "/>
+              </div>
+    </form>
+  `;
+  } 
+  if (checkout_date != null || undefined) {
+        checkout.innerHTML += `
+  <div class="center" > checkout date: &nbsp ${checkout_date}</div>
   `;
   }
 }
 
 displayDate();
+
+console.log(typeof(checkout_date))

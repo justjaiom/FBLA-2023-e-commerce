@@ -548,7 +548,7 @@ body {
 }
 .book{
     background: #535756 ;
-    color: #fff;
+    color: #F6F9FE;
     padding: 40px 60px;
     margin: 20;
     border-radius: 25px;
@@ -567,8 +567,8 @@ body {
 .book-form input[type = "submit"]{
     margin: 18px 0 0 0;
     background: var(--dark);
-    color: #fff;
-    border: 1px solid #fff;
+    color: #F6F9FE;
+    border: 1px solid #F6F9FE;
 }
 .book-form label, .book-form input{
     width: 100%;
@@ -584,10 +584,12 @@ body {
     border-radius: 5px;
     font-size: 17px;
     border: none;
+    background: #F6F9FE;
+    color: black;
 }
-.book-form input:focus{
-    outline: 0;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+.book-form input:active{
+    color: #F6F9FE;
+    background: #535756;
 }
 @media(min-width: 768px){
     .book-form {
