@@ -93,39 +93,58 @@ function displayCart() {
 
 
         `;
-
     });
 
     total.innerHTML += `
 <div class='total'>$${cartCost}.00</div>
     
-    `
+    `;
   }
 }
 
 displayCart();
 
-function setdate(event){
-  event.preventDefault()
-  var checkin_date = document.getElementById('chekin-date').value
-  localStorage.setItem('checkin-date', checkin_date)
-  var checkout_date = document.getElementById('chekout-date').value
-  localStorage.setItem('checkout-date', checkout_date)
+function setdate(event) {
+  event.preventDefault();
+  var checkin_date = document.getElementById("chekin-date").value;
+  localStorage.setItem("checkin-date", checkin_date);
+  var checkout_date = document.getElementById("chekout-date").value;
+  localStorage.setItem("checkout-date", checkout_date);
 }
 
+function displayDate() {
+  let checkin_date = localStorage.getItem("checkin-date");
+  let checkout_date = localStorage.getItem("checkout-date");
+  console.log(checkout_date);
+  console.log(checkin_date);
+  let date_container = document.querySelector(".date_container");
+  let checkin = document.querySelector(".checkin");
+  let checkout = document.querySelector(".checkout");
+  checkin.innerHTML = "";
+  checkout.innerHTML = "";
+  if (checkin != null) {
+    checkin.innerHTML += `
+  <div class="center"> checkin date: &nbsp ${checkin_date}</div>
+  `;
+  }
 
-function displayDate () {
-let checkin_date = localStorage.getItem('checkin-date')
-let checkout_date = localStorage.getItem('checkout-date')
-let date_container = document.querySelector(".date_container");
-date_container.innerHTML = "";
-date_container.innerHTML += 
-`
-<div class="center"> checkin date: &nbsp ${checkin_date}</div>
-<div class="center" > checkout date: &nbsp ${checkout_date}</div>
-`
+  if (checkout != null) {
+    checkout.innerHTML += `
+  <div class="center" > checkout date: &nbsp ${checkout_date}</div>
+  `;
+  }
 
+  if (checkin_date == null) {
+    checkin.innerHTML = `
+  <input type="date"></input>
+  `;
+  }
 
+  if (checkout_date == null) {
+    checkout.innerHTML = `
+  <input type="date"></input>
+  `;
+  }
 }
 
-displayDate()
+displayDate();
