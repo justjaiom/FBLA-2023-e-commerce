@@ -553,7 +553,7 @@ body {
     margin: 20;
     border-radius: 25px;
     overflow: hidden;
-    padding: 30px 50px 0px 50px;
+    padding: auto;
 }
 .book-form{
     display: grid;
