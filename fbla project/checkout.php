@@ -56,6 +56,7 @@ if (!empty($firstname)||!empty($lastname)||!empty($creditcard)||!empty($security
         $conn -> close(); //close database connection
     }
 } else {
+    //use checkout.js to use the validate function 
     echo "Fill out all required forms!" //this can be a placeholder for once we create the DB and link the db to the chechout.html
 }
 ?>
