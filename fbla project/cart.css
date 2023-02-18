@@ -1,3 +1,13 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+
+}
+html{
+  scroll-behavior: smooth;
+}
 
 .container {
     display: grid; 
@@ -24,6 +34,7 @@
     margin: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .header {
@@ -52,4 +63,98 @@
         
     }
 
-    
+
+
+/* booking form */
+.book{
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)); 
+  color: #fff;
+  padding: 40px 60px;
+  border-radius: 25px;
+  margin: 40px;
+}
+.book-form{
+  display: grid;
+  
+}
+.form-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.book-form input[type = "submit"]{
+  margin: 18px 0 0 0;
+  background: var(--dark);
+  color: #fff;
+  border: 1px solid #fff;
+}
+.book-form input[type = "reset"]{
+  margin: 18px 0 0 0;
+  background: var(--dark);
+  color: #fff;
+  border: 1px solid #fff;
+}
+.book-form label, .book-form input{
+  width: 100%;
+}
+.book-form label{
+  font-weight: 600;
+  word-spacing: 5px;
+  padding-bottom: 8px;
+}
+.book-form input:not(.btn){
+  margin: 4px 0 16px 0;
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: none;
+}
+.book-form input:active{
+  outline: 0;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+@media(min-width: 768px){
+  .book-form{
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 24px;
+  }
+}
+@media(min-width: 1170px){
+  .book-form{
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media(min-width: 1370px){
+  .book-form{
+      grid-template-columns: 2fr 2fr 1fr 1fr ;
+  }
+  .book{
+      height: 40vh;
+      display: grid;
+  }
+}
+@media(max-width: 500px){
+  .book{
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}
+
+.btn{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px;
+  display: block;
+  margin: 15px auto;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:active {
+  background-color: #535756;
+  transition: 20ms;
+}

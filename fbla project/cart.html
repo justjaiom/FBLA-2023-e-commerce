@@ -22,36 +22,59 @@
     <div class="bg_img">
       <h1>Your Cart</h1>
     </div>
+    <div style="display: grid; grid-template-columns: 70% 30%;">
+    <div>
+      <div class="book">
+        <form class="book-form" onsubmit="setdate(event)">
+          <div class="form-item">
+            <label for="checkin_date">Check In Date: </label>
+            <input type="date" id="chekin-date" />
+          </div>
+          <div class="form-item">
+            <label for="checkout_date">Check Out Date: </label>
+            <input type="date" id="chekout-date" />
+          </div>
 
-    <div class="parent">
+          <div class="form-item">
+            <input type="submit" class="btn" value="Book Now" />
+          </div>
+          <div class="form-item">
+            <input
+              type="reset"
+              class="btn"
+              value="Reset"
+              onclick="cleardate()"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="parent">
+        <div class="header">
+          <div>Room</div>
+          <div>Quantity</div>
+          <div>price</div>
+          <div>total</div>
+        </div>
 
-    <div class="header">
-      <div>Room</div>
-      <div>Quantity</div>
-      <div>price</div>
-      <div>total</div>
+        <div class="container"></div>
+
+        <div class="total"></div>
+      </div>
     </div>
-    <div class="container">
-
-    </div>
-    <div class="total"></div>
+      <div class="parent">this is where the payment will go</div>
   </div>
 
-  <div class="parent">
-    <div class="date_container">
-      <div class="checkin center"  style="display: flex; align-items: center; justify-content: center;">checkin date:&nbsp;&nbsp;</div>
-      <div class="checkout center" style="display: flex; align-items: center; justify-content: center;">checkout date:&nbsp;&nbsp;</div>
-    </div>
-  </div>
+      <script src="cart.js"></script>
+      <script src="rooms.js"></script>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
 
-    <script src="cart.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+
   </body>
 </html>
