@@ -117,52 +117,6 @@ function setdate(event) {
   localStorage.setItem("checkout_date", checkout_date);
 }
 
-function displayDate() {
-  let checkin_date = localStorage.getItem("checkin_date");
-  let checkout_date = localStorage.getItem("checkout_date");
-  console.log(checkout_date);
-  console.log(checkin_date);
-  let date_container = document.querySelector(".date_container");
-  let checkin = document.querySelector(".checkin");
-  let checkout = document.querySelector(".checkout");
-
-
-
-  if ( checkin_date === '') {
-    checkin.innerHTML += `
-    <form class = "book-form" onsubmit="setdate(event)">
-    <div class = "form-item">
-                  <input type = "date" id = "chekin-date">
-                  <input type="submit"  onClick=refreshPage() value="submit "/>
-              </div>
-    </form>
-  `;
-  } 
-  
-  if (checkin_date) {
-    checkin.innerHTML += `
-    <div>${checkin_date}</div>
-    `;
-  }
-
-  if (checkout_date === '') {
-    checkout.innerHTML += `
-    <form class = "book-form" onsubmit="setdate(event)">
-    <div class = "form-item">
-                  <input type = "date" id = "chekout-date">
-                  <input type="submit"  onClick=refreshPage() value="submit "/>
-              </div>
-    </form>
-  `;
-  } 
-  if (checkout_date) {
-        checkout.innerHTML += `
-  <div>  ${checkout_date}</div>
-  `;
-  }
-}
-
-displayDate();
 
 
 
