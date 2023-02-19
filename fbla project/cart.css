@@ -58,10 +58,8 @@ html {
 }
 
 
-@media (max-width:1150px) {
   .change {
     display: block;
-  }
 }
 
 
