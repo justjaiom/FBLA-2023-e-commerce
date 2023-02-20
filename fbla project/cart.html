@@ -88,26 +88,25 @@
                 <h3 class="header-pay">Payment</h3>
                 <label for="ccn">Credit card number</label>
                 <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard()"
-                  autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                  autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" />
                 <script>
                   function addDashCard() {
                     var inputValue = document.getElementById("ccn").value;
                     var inputValueLength = inputValue.length;
-                    if (inputValueLength == 4 || inputValueLength == 9 || inputValueLength == 14) {
-                      document.getElementById("ccn").value =
-                        inputValue + "-";
+                    if (
+                      inputValueLength == 4 ||
+                      inputValueLength == 9 ||
+                      inputValueLength == 14
+                    ) {
+                      document.getElementById("ccn").value = inputValue + "-";
                     }
                   }
                 </script>
                 <label for="expmonth">Exp Date</label>
                 <input required type="date" name="expmonth" />
 
-                <div class="row">
-                  <div class="col-50">
-                    <label for="cvv">CVV</label>
-                    <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
-                  </div>
-                </div>
+                <label for="cvv">CVV</label>
+                <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
               </div>
             </div>
             <button class="btn">submit</button>
@@ -115,8 +114,6 @@
         </div>
       </div>
     </div>
-
-
   </div>
 
   <script src="cart.js"></script>
