@@ -1,112 +1,113 @@
 <html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <head>
+    <title>The Living Room - Cart</title>
 
-<head>
-  <title>The Living Room - Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart.css" />
+  </head>
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="cart.css" />
-</head>
+  <body>
+    <header>
+      <h1 class="title">The Living Room</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="info.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <h1 class="title">The Living Room</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="location.html">Location</a></li>
-        <li><a href="rooms.html">Rooms</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="info.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="bg_img">
-    <h1>Your Cart</h1>
-  </div>
-  <div style="display: grid; grid-template-columns: 60% 40%">
-    <div>
-      <div class="book">
-        <form class="book-form" onsubmit="setdate(event)">
-          <div class="form-item">
-            <label for="checkin_date">Check In Date: </label>
-            <input type="date" id="chekin-date" />
-          </div>
-          <div class="form-item">
-            <label for="checkout_date">Check Out Date: </label>
-            <input type="date" id="chekout-date" />
-          </div>
-
-          <div class="form-item">
-            <input type="submit" class="btn" value="Book" />
-          </div>
-          <div class="form-item">
-            <input type="reset" class="btn" value="Reset" onclick="cleardate()" />
-          </div>
-        </form>
-      </div>
-      <div class="parent">
-        <div class="header">
-          <div>Room</div>
-          <div>Quantity</div>
-          <div>price</div>
-          <div>total</div>
-        </div>
-
-        <div class="container"></div>
-
-        <div class="total"></div>
-      </div>
+    <div class="bg_img">
+      <h1>Your Cart</h1>
     </div>
-    <div class="payment-info">
-      <div class="row">
-        <div class="col-75">
-          <div class="container-pay">
-            <div class="row">
-              <div class="col-50">
-                <h3 class="header-pay">Guest Information</h3>
-                <label> Gues Name</label>
-                <input required type="text" placeholder="John Doe" />
-                <label for="email"> Email</label>
-                <input required type="email" placeholder="john@example.com" />
-                <label for="phone"><i class="fa fa-phone"></i> Phone</label>
-                <input required type="tel" id="phone" onkeypress="addDashPhone()" placeholder="123-456-7890"
-                  maxlength="12" />
-                <script>
-                  function addDashPhone() {
-                    var inputValue = document.getElementById("phone").value;
-                    var inputValueLength = inputValue.length;
-                    if (inputValueLength == 3 || inputValueLength == 7) {
-                      document.getElementById("phone").value =
-                        inputValue + "-";
+    <div style="display: grid; grid-template-columns: 60% 40%">
+      <div>
+        <div class="book">
+          <form class="book-form" onsubmit="setdate(event)">
+            <div class="form-item">
+              <label for="checkin_date">Check In Date: </label>
+              <input type="date" id="chekin-date" />
+            </div>
+            <div class="form-item">
+              <label for="checkout_date">Check Out Date: </label>
+              <input type="date" id="chekout-date" />
+            </div>
+
+            <div class="form-item">
+              <input type="submit" class="btn" value="Book" />
+            </div>
+            <div class="form-item">
+              <input type="reset" class="btn" value="Reset" onclick="cleardate()" />
+            </div>
+          </form>
+        </div>
+        <div class="parent">
+          <div class="header">
+            <div>Room</div>
+            <div>Quantity</div>
+            <div>price</div>
+            <div>total</div>
+          </div>
+
+          <div class="container"></div>
+
+          <div class="total"></div>
+        </div>
+      </div>
+      <div class="payment-info">
+        <div class="row">
+          <div class="col-75">
+            <div class="container-pay">
+              <div class="row">
+                <div class="col-50">
+                  <h3 class="header-pay">Guest Information</h3>
+                  <label> Gues Name</label>
+                  <input required type="text" placeholder="John Doe" />
+                  <label for="email"> Email</label>
+                  <input required type="email" placeholder="john@example.com" />
+                  <label for="phone"><i class="fa fa-phone"></i> Phone</label>
+                  <input required type="tel" id="phone" onkeypress="addDashPhone()" placeholder="123-456-7890"
+                    maxlength="12" />
+                  <script>
+                    function addDashPhone() {
+                      var inputValue = document.getElementById("phone").value;
+                      var inputValueLength = inputValue.length;
+                      if (inputValueLength == 3 || inputValueLength == 7) {
+                        document.getElementById("phone").value =
+                          inputValue + "-";
+                      }
                     }
-                  }
-                </script>
-              </div>
+                  </script>
+                </div>
 
               <div class="col-50">
                 <h3 class="header-pay">Payment</h3>
                 <label for="ccn">Credit card number</label>
                 <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard()"
-                  autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" />
+                  autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
                 <script>
                   function addDashCard() {
                     var inputValue = document.getElementById("ccn").value;
                     var inputValueLength = inputValue.length;
-                    if (
-                      inputValueLength == 4 ||
-                      inputValueLength == 9 ||
-                      inputValueLength == 14
-                    ) {
-                      document.getElementById("ccn").value = inputValue + "-";
+                    if (inputValueLength == 4 || inputValueLength == 9 || inputValueLength == 14) {
+                      document.getElementById("ccn").value =
+                        inputValue + "-";
                     }
                   }
                 </script>
                 <label for="expmonth">Exp Date</label>
                 <input required type="date" name="expmonth" />
 
-                <label for="cvv">CVV</label>
-                <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
+                <div class="row">
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
+                  </div>
+                </div>
               </div>
             </div>
             <button class="btn">submit</button>
@@ -114,6 +115,8 @@
         </div>
       </div>
     </div>
+
+
   </div>
 
   <script src="cart.js"></script>
