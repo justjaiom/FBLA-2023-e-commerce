@@ -1,4 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+:root{
+  --dark: #535756;
+}
+
+html{
+  scroll-behavior: smooth;
+}
 
 
 #map {
@@ -12,6 +19,7 @@
 body {
   margin: 0;
   padding: 0;
+  line-height: 1.4;
   font-family: 'Lato', sans-serif;
   background-color: #F2F2F2;
   box-sizing: border-box;
@@ -87,200 +95,82 @@ justify-content: center;
   font-weight: 700;
 }
 
-.alert{
-  background-color: #535756;
-  color: #F2F2F2;
-}
 
-.site-footer
-{
-  background-color:#26272b;
-  padding:45px 0 20px;
-  font-size:15px;
-  line-height:24px;
-  color:#737373;
-}
-.site-footer hr
-{
-  border-top-color:#bbb;
-  opacity:0.5
-}
-.site-footer hr.small
-{
-  margin:20px 0
-}
-.site-footer h6
-{
-  color:#fff;
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:5px;
-  letter-spacing:2px
-}
-.site-footer a
-{
-  color:#737373;
-}
-.site-footer a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
-}
-.footer-links
-{
-  padding-left:0;
-  list-style:none
-}
-.footer-links li
-{
-  display:block
-}
-.footer-links a
-{
-  color:#737373
-}
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
-}
-.footer-links.inline li
-{
-  display:inline-block
-}
-.site-footer .social-icons
-{
-  text-align:right
-}
-.site-footer .social-icons a
-{
-  width:40px;
-  height:40px;
-  line-height:40px;
-  margin-left:6px;
-  margin-right:0;
-  border-radius:100%;
-  background-color:#33353d
-}
 
-.copyright-text
-{
-  margin:0
-}
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
-    margin-bottom:30px
-  }
-}
-@media (max-width:767px)
-{
-  .site-footer
-  {
-    padding-bottom:0
-  }
-  .site-footer .copyright-text,.site-footer .social-icons
-  {
-    text-align:center
-  }
-}
-.social-icons
-{
-  padding-left:0;
-  margin-bottom:0;
-  list-style:none
-}
-
-.social-icons li
-{
-  display:inline-block;
-  margin-bottom:4px
-}
-
-.social-icons li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-icons li a i {
-  width: 100%;
+.footer{
+  background: var(--dark);
+  color: #fff;
   text-align: center;
 }
-
-.social-icons li.title
-{
-  margin-right:15px;
-  text-transform:uppercase;
-  color:#96a2b2;
-  font-weight:700;
-  font-size:13px
+.footer-container{
+  width: 85vw;
+  margin: 0 auto;
+  padding: 30px 0;
 }
-.social-icons a{
-  background-color:#eceeef;
-  color:#818a91;
-  font-size:16px;
-  display:inline-block;
-  line-height:44px;
-  width:44px;
-  height:44px;
-  text-align:center;
-  margin-right:8px;
-  border-radius:100%;
-  -webkit-transition:all .2s linear;
-  -o-transition:all .2s linear;
-  transition:all .2s linear
+.footer-container p, .footer-container a, .footer-container span{
+  opacity: 0.8;
 }
-.social-icons a:active,.social-icons a:focus,.social-icons a:hover
-{
-  color:#fff;
-  background-color:#15b04e
+.footer a{
+  display: block;
+  color: #fff;
+  text-decoration: none;
 }
-.social-icons.size-sm a
-{
-  line-height:34px;
-  height:34px;
-  width:34px;
-  font-size:14px
+.social-icons{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
 }
-.social-icons a.facebook:hover
-{
-  background-color:#3b5998
+.social-icons li{
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  background: #2e2e2e;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
 }
-.social-icons a.twitter:hover
-{
-  background-color:#00aced
+.social-icons li:hover{
+  background: #fff;
+  color: #2e2e2e;
 }
-.social-icons a.linkedin:hover
-{
-  background-color:#007bb6
+.contact-item span{
+  display: block;
 }
-.social-icons a.airbnb:hover
-{
-  background-color:#ea4c89
+@media(min-width: 900px){
+  .footer-container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+  }
 }
-@media (max-width:767px)
-{
-  .social-icons li.title
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
+@media(min-width: 1170px){
+  .footer{
+      text-align: left;
+  }
+  .footer-container{
+      grid-template-columns: repeat(4, 1fr);
+  }
+  .footer-container div:nth-child(1) p{
+      padding-right: 20px;
+  }
+  .contact-item{
+      display: grid;
+      grid-template-columns: 10% 90%;
+      margin-bottom: 15px;
+      align-items: center;
   }
 }
 
-@media (min-width: 768px) {
-  .footer-columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .footer-column {
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
-  }
+.showModal{
+  position: fixed;
+  background: transparent;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
 }
+
+
 
