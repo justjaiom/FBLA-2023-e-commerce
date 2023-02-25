@@ -83,25 +83,50 @@ function displayCart() {
   let total = document.querySelector(".total");
   if (cartItems && productContainer) {
     productContainer.innerHTML = "";
+    let totalPrice = 0;
     Object.values(cartItems).map((item) => {
+      totalPrice += item.incart * item.price;
       productContainer.innerHTML += `
         <div class="products" style="margin-left: 80px">
-            <img src='./imgs/${item.tag}.jpg'/>
-            <span class="change">${item.name}</span>
+          <img src='./imgs/${item.tag}.jpg'/>
+          <span class="change">${item.name}</span>
         </div>
-        <div class='quantity' style="text-align: center">${item.incart}</div>
-        <div class='price' style="text-align: center">$${item.price}.00</div>
-
-
-        `;
+        <div class='quantity' style="text-align: center">
+          <button class="decrement-btn" onclick="decrementItem('${item.tag}')">-</button>
+          <span>${item.incart}</span>
+          <button class="increment-btn" onclick="incrementItem('${item.tag}', ${item.price})">+</button>
+        </div>
+        <div class='price' style="text-align: center">$${item.price}.00</div>`;
     });
 
-    total.innerHTML += `
-<div class='total'>$${cartCost}.00</div>
-    
-    `;
+    cartCost = totalPrice;
+    localStorage.setItem("totalCost", cartCost);
+    total.innerHTML = `
+      <div class='total'>$${cartCost}.00</div>`;
   }
 }
+
+function decrementItem(tag) {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  if (cartItems[tag].incart > 0) {
+    cartItems[tag].incart -= 1;
+    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+    displayCart();
+  }
+}
+
+function incrementItem(tag, price) {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  cartItems[tag].incart += 1;
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+  let cartCost = parseInt(localStorage.getItem("totalCost"));
+  cartCost += price;
+  localStorage.setItem("totalCost", cartCost);
+  displayCart();
+}
+
 
 displayCart();
 
