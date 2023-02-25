@@ -263,3 +263,31 @@ label {
     margin-bottom: 20px;
   }
 }
+
+
+
+.decrement-btn, .increment-btn {
+    width: 30px;
+    height: 30px;
+    background-color: var(--dark);
+    color: #bdc093;
+    border: none;
+    border-radius: 50%;
+    padding: 0px;
+    font-size: 1.2rem;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.decrement-btn:hover, .increment-btn:hover {
+    background-color: white;
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.decrement-btn:active, .increment-btn:active {
+    background-color: var(--dark);
+    color: white;
+    transition: var(--transition);
+}
