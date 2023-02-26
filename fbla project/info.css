@@ -41,6 +41,7 @@ form {
     align-items: center;
     margin: 0;
     background-image: url("imgs/bgimg.webp");
+    background-size: cover;
     color: #535756;
     padding: 20px;
 
