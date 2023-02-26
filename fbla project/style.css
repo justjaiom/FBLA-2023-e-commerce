@@ -72,10 +72,16 @@ nav a:hover {
   color: #bdc093;
 }
 
-.color {
+.color, .hover:active{
   background-color: #535756;
   color: #bdc093;
   border-color: transparent;
+}
+
+.hover:hover{
+  background-color: #bdc093;
+  color: #535756;
+
 }
 
 #container {
@@ -189,6 +195,8 @@ justify-content: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, auto);
   grid-gap: 10px;
+  width: 80%;
+  margin: auto;
 }
 
 .grid-item {
