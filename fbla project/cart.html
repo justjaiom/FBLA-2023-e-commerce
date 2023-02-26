@@ -71,13 +71,12 @@
               <div class="row">
                 <div class="col-50">
                   <h3 class="header-pay">Guest Information</h3>
-                  <label> Guest Name</label>
+                  <label>Guest Name</label>
                   <input required type="text" placeholder="John Doe" />
-                  <label for="email"> Email</label>
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
                   <input required type="email" placeholder="john@example.com" />
                   <label for="phone"><i class="fa fa-phone"></i> Phone</label>
-                  <input required type="tel" id="phone" onkeypress="addDashPhone()" placeholder="123-456-7890"
-                    maxlength="12" />
+                  <input required type="tel" id="phone" onkeypress="addDashPhone()" placeholder="123-456-7890" maxlength="12" />
                   <script>
                     function addDashPhone() {
                       var inputValue = document.getElementById("phone").value;
@@ -89,12 +88,10 @@
                     }
                   </script>
                 </div>
-                
                 <div class="col-50">
                   <h3 class="header-pay">Payment</h3>
                   <label for="ccn">Credit card number</label>
-                  <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard()"
-                    autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                  <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard()" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
                   <script>
                     function addDashCard() {
                       var inputValue = document.getElementById("ccn").value;
@@ -107,15 +104,34 @@
                   </script>
                   <label for="expmonth">Exp Date</label>
                   <input required type="date" name="expmonth" />
-
-                      <label for="cvv">CVV</label>
-                      <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
+                  <label for="cvv"> <i class="fas fa-credit-card"> </i> CVV</label>
+                  <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
                 </div>
               </div>
-              <button class="btn">submit</button>
+              <button class="btn" onclick="validateForm()">Submit</button>
             </div>
           </div>
         </div>
+      </div>
+      
+      <script>
+      function validateForm() {
+        var inputs = document.getElementsByTagName("input");
+        for (var i = 0; i < inputs.length; i++) {
+          if (inputs[i].value == "") {
+            inputs[i].style.borderColor = "red";
+            inputs[i].placeholder = "required";
+          } else {
+            inputs[i].style.borderColor = "";
+          }
+        }
+      }
+      </script>
+
+
+      </style>
+      
+      
         
       </div>
       
