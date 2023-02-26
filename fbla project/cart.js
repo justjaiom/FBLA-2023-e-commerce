@@ -5,19 +5,19 @@ let products = [
   {
     name: "1 room 1 bed",
     tag: "img1.1",
-    price: 70,
+    price: 69.00,
     incart: 0,
   },
   {
     name: "2 room 1 bed",
     tag: "img3.3",
-    price: 90,
+    price: 99.00,
     incart: 0,
   },
   {
     name: "suite",
     tag: "img2.2",
-    price: 120,
+    price: 119.00,
     incart: 0,
   },
 ];
