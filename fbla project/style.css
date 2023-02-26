@@ -192,9 +192,11 @@ justify-content: center;
 }
 
 .grid-item {
-  border: 1px solid #ccc;
+  background-color: white;
+  border: none;
   padding: 10px;
   text-align: center;
+  border-radius: 20px;
 }
 
 .grid-item img {
@@ -210,4 +212,20 @@ justify-content: center;
   margin: 0;
 }
 
+.food-btn {
+  background: #535756;
+  color: #F2F2F2;
+  padding: 10px 30px 10px 30px;
+  border-radius: 20px;
+  border: none;
+}
 
+.food-btn:hover {
+  background-color: #bdc093;
+  color: #535756;
+}
+
+.food-btn:active{
+  background: #535756;
+  color: #F2F2F2;
+}
