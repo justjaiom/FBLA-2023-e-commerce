@@ -1,0 +1,12 @@
+eggs img: https://edibletimes.com/wp-content/uploads/2022/09/How-to-Make-Fluffy-Scrambled-Eggs_2022_1200-wide-13.jpg
+bacon img: https://static9.depositphotos.com/1010050/1175/i/600/depositphotos_11751417-stock-photo-crispy-bacon-strips.jpg
+sausages img: https://www.foodbusinessnews.net/ext/resources/2022/02/25/sausage.png?height=635&t=1647883875&width=1200
+toast img: https://bloximages.chicago2.vip.townnews.com/madison.com/content/tncms/assets/v3/editorial/6/01/601f4452-934e-11ed-9f32-13e9a9a968b7/63c16a42bdc8e.image.jpg?resize=1200%2C800
+bagles img: https://townsquare.media/site/701/files/2019/05/bagels-Credit-Think-Stock.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89
+muffins img: https://www.inspiredtaste.net/wp-content/uploads/2021/08/Vegan-Blueberry-Muffins-1-1200-1200x800.jpg
+Croissants img: https://www.monpetitfour.com/wp-content/uploads/2015/04/croissants-1-copy.jpg
+fruit img: https://www.culinaryhill.com/wp-content/uploads/2022/04/Fruit-Salad-Culinary-Hill-1200x800-1.jpg
+yogurt img: https://sweetlysteviausa.com/pub/media/recipe/vanilla_yogurt-1200x800.jpg
+oatmeal img: https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/11/Oatmeal-Recipe-5.jpg
+waffle img: https://littlespoonfarm.com/wp-content/uploads/2022/09/Stack-of-sourdough-waffles-on-a-pkate.jpg
+drinks img: https://s.hdnux.com/photos/01/23/41/12/21893783/6/1200x0.jpg
