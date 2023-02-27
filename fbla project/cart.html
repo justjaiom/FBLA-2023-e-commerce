@@ -91,7 +91,7 @@
                 <div class="col-50">
                   <h3 class="header-pay">Payment</h3>
                   <label for="ccn">Credit card number</label>
-                  <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard()" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                  <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard()" autocomplete="cc-number" minlength= "19" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
                   <script>
                     function addDashCard() {
                       var inputValue = document.getElementById("ccn").value;
