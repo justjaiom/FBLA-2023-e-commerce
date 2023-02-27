@@ -33,3 +33,18 @@ function initMap() {
 
 window.initMap = initMap;
 
+function showPopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "block";
+  setTimeout(function(){
+    popup.style.opacity = 1;
+  }, 10);
+}
+
+function hidePopup() {
+  var popup = document.getElementById("popup");
+  popup.style.opacity = 0;
+  setTimeout(function(){
+    popup.style.display = "none";
+  }, 2000);
+}
