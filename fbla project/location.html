@@ -3,10 +3,12 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
   />
+  <script src="https://polyfill.io/v3/polyfill.js?features=default"></script>
   <head>
     <title>The Living Room - Location</title>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./location.css" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
@@ -25,8 +27,26 @@
     <main class="bg_img">
       <h1>Discover Whats near you</h1>
     </main>
+    <div class="grid">
+      <div id="map"></div>
+      <div id="sidebar">
+       <ol >
+        <div class="container">
+          place
+        </div>
+        <div class="container">
+          place
+        </div>
+        <div class="container">
+          place
+        </div>
+        <div class="container">
+          place
+        </div>
+       </ol>
+      </div>
+    </div>
 
-    <div id="map"></div>
 
     <footer class = "footer">
       <div class = "footer-container">
@@ -92,3 +112,5 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5W9FAmJM24VNxJQZoMhjCfUw3snG2LGA&callback=initMap&v=weekly"
   defer
 ></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5W9FAmJM24VNxJQZoMhjCfUw3snG2LGA&libraries=places"></script>
+

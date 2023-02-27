@@ -1,0 +1,14 @@
+.grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    gap: 0px;
+    height: 100%;
+}
+
+.container{
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+}
