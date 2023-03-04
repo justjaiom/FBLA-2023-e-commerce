@@ -66,7 +66,6 @@ function initMap() {
 function addPlaces(places, map) {
   const placesList = document.getElementById("places");
 
-<<<<<<< HEAD
   for (const place of places) {
     if (place.geometry && place.geometry.location) {
       const image = {
@@ -96,20 +95,3 @@ function addPlaces(places, map) {
 }
 
 window.initMap = initMap;
-=======
-function showPopup() {
-  var popup = document.getElementById("popup");
-  popup.style.display = "block";
-  setTimeout(function(){
-    popup.style.opacity = 1;
-  }, 10);
-}
-
-function hidePopup() {
-  var popup = document.getElementById("popup");
-  popup.style.opacity = 0;
-  setTimeout(function(){
-    popup.style.display = "none";
-  }, 2000);
-}
->>>>>>> c26a40376378937cd7de5826bb5383bfe5906fca
