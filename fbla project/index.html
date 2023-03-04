@@ -28,8 +28,29 @@
   </div>
 
   <div id="container">
-    <button class="hover"><b>Breakfest Options</b></button>
-    <button class="hover"><b>Discounts</b></button>
+    <button class="hover" onclick="scrollToBreakfastOptions()"><b>Breakfast Options</b></button>
+
+    <script>
+      function scrollToBreakfastOptions() {
+        var element = document.getElementById("breakfast-options-section");
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+      }
+    </script>
+    <button class="hover" onclick="showPopup()"><b>About Us</b></button>
+    <div id="popup">
+      <div class="popup-content">
+        <span class="close" onclick="hidePopup()">&times;</span>
+        <p>Welcome to The Living Room, a unique bed and breakfast experience that flips traditional concepts on their head! We're located right on the beach, offering our guests the opportunity to indulge in stunning ocean views and refreshing sea breezes.
+
+          At The Living Room, we're all about bringing a playful twist to the traditional bed and breakfast concept. Our name itself reflects our commitment to creating a warm, inviting atmosphere where guests can feel at home in their own private living spaces. Whether you're traveling solo, with your partner, or with your family, our accommodations are designed to provide you with all the comforts of home, with a fun and quirky twist.
+          
+          From our cozy guest rooms to our spacious communal living spaces, we're dedicated to creating an environment where guests can relax, unwind, and connect with one another. Whether you want to curl up with a good book in our living room, catch some rays on our beachfront deck, or play board games with fellow travelers, you'll find plenty of opportunities to make yourself at home at The Living Room.
+          
+          So why settle for a boring, run-of-the-mill bed and breakfast exp</p>
+      </div>
+    </div>
+    
+    
     <button class="color hover" onclick="openrooms()"><b>Check Rooms & Rates</b></button>
   </div>
 
@@ -87,7 +108,9 @@
   <br>
   <header style="width: 80%; margin: auto; border-radius: 10px;">
     <br>
-      <h2 style="color: white; ">Breakfast Options</h2>
+      <section id="breakfast-options-section">
+        <h2 sectionid="" style="color: white; ">Breakfast Options</h2>
+      </section>
     <br>
   </header>
   <br>
@@ -183,9 +206,10 @@
         <div>
             <h2>Useful Links</h2>
             <a href = "index.html">Home</a>
-            <a href = "rooms.css">Rooms</a>
+            <a href = "rooms.html">Rooms</a>
             <a href = "location.html">Location</a>
-            <a href = "index.html">Discounts</a>
+            <a href = "cart.html">Cart</a>
+            <a href = "info.html">Contact Us</a>
         </div>
 
         <div>
