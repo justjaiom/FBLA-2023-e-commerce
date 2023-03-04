@@ -11,4 +11,11 @@
     border-radius: 20px;
     padding: 40px;
     margin: 20px;
+    width: 60%;
+    height: fit-content;
+}
+
+#map{
+    padding: 40px;
+    margin: 20px;
 }

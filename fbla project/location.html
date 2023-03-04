@@ -1,13 +1,9 @@
 <html>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-  />
-  <script src="https://polyfill.io/v3/polyfill.js?features=default"></script>
   <head>
-    <title>The Living Room - Location</title>
+    <title>Place Search Pagination</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="./location.css" />
     <script type="module" src="./index.js"></script>
   </head>
@@ -24,93 +20,24 @@
         </ul>
       </nav>
     </header>
-    <main class="bg_img">
-      <h1>Discover Whats near you</h1>
-    </main>
     <div class="grid">
       <div id="map"></div>
-      <div id="sidebar">
-       <ol >
-        <div class="container">
-          place
-        </div>
-        <div class="container">
-          place
-        </div>
-        <div class="container">
-          place
-        </div>
-        <div class="container">
-          place
-        </div>
-       </ol>
+      <div class="container" id="sidebar">
+        <h2>Results</h2>
+        <ul id="places"></ul>
+        <button id="more">Load more results</button>
       </div>
     </div>
 
-
-    <footer class = "footer">
-      <div class = "footer-container">
-          <div>
-              <h2>About Us </h2>
-              <p> The living room is a Bed & Breakfest located on the shores of Galveston Texas. We offer comfortable rooms with stunning views of Galveston's shoreline. Enjoy a delicious breakfast with fresh, locally sourced ingredients. Escape the city and recharge in our peaceful B&B for a romantic getaway. Come experience Galveston's beauty and tranquility. </p>
-              <ul class = "social-icons">
-                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a class="airbnb" href="#"><i class="fab fa-airbnb"></i></a></li>
-                <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li> 
-            </ul>
-          </div>
-  
-          <div>
-              <h2>Useful Links</h2>
-              <a href = "index.html">Home</a>
-              <a href = "rooms.css">Rooms</a>
-              <a href = "location.html">Location</a>
-              <a href = "index.html">Discounts</a>
-          </div>
-  
-          <div>
-              <h2>Privacy</h2>
-              <a href = "location.html">About</a>
-              <a href = "location.html">Location</a>
-              <a href = "#">Terms & Conditions</a>
-              <a href = "#">Privacy & Policy</a>
-          </div>
-  
-          <div>
-              <h2>Have A Question?</h2>
-              <div class = "contact-item">
-                  <span>
-                      <i class = "fas fa-map-marker-alt"></i>
-                  </span>
-                  <span>
-                    2402 Avenue Q 1/2, Galveston, TX 77550
-                  </span>
-              </div>
-              <div class = "contact-item">
-                  <span>
-                      <i class = "fas fa-phone-alt"></i>
-                  </span>
-                  <span>
-                      +512-123-1234
-                  </span>
-              </div>
-              <div class = "contact-item">
-                  <span>
-                      <i class = "fas fa-envelope"></i>
-                  </span>
-                  <span>
-                      info@thelivingroom.com
-                  </span>
-              </div>
-          </div>
-      </div>
-  </footer>
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5W9FAmJM24VNxJQZoMhjCfUw3snG2LGA&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
   </body>
 </html>
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5W9FAmJM24VNxJQZoMhjCfUw3snG2LGA&callback=initMap&v=weekly"
-  defer
-></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5W9FAmJM24VNxJQZoMhjCfUw3snG2LGA&libraries=places"></script>
-
