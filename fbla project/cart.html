@@ -102,8 +102,8 @@
                       }
                     }
                   </script>
-                  <label for="expmonth">Exp Date</label>
-                  <input required type="date" name="expmonth" />
+                  <label for="expmonth">Exp Date (MM/YY)</label>
+                  <input required type="text" name="expmonth" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" maxlength="5" oninput="this.value=this.value.replace(/[^0-9\/]/g,'').replace(/(\d{2})\/?(\d{0,2}).*/,'$1/$2');" style="width: 43ch;">                          
                   <label for="cvv"> <i class="fas fa-credit-card"> </i> CVV</label>
                   <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
                 </div>
