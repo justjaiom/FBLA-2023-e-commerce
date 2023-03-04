@@ -3,7 +3,7 @@ function initMap() {
   const the_living_room = { lat: 29.282981, lng: -94.800104 };
   const map = new google.maps.Map(document.getElementById("map"), {
     center: the_living_room,
-    zoom: 17,
+    zoom: 15,
     mapId: "8d193001f940fde3",
 
   });
@@ -47,7 +47,7 @@ function initMap() {
 
   // Perform a nearby search.
   service.nearbySearch(
-    { location: the_living_room, radius: 2500, type: "store" },
+    { location: the_living_room, radius: 2000, type: "store"},
     (results, status, pagination) => {
       if (status !== "OK" || !results) return;
 
@@ -68,7 +68,7 @@ function addPlaces(places, map) {
 
   for (const place of places) {
     if (place.geometry && place.geometry.location) {
-      const image = {
+      let image = {
         url: place.icon,
         size: new google.maps.Size(71, 71),
         origin: new google.maps.Point(0, 0),
@@ -84,11 +84,13 @@ function addPlaces(places, map) {
       });
 
       const li = document.createElement("li");
+      li.className = 'place'
 
       li.textContent = place.name;
       placesList.appendChild(li);
       li.addEventListener("click", () => {
         map.setCenter(place.geometry.location);
+
       });
     }
   }
