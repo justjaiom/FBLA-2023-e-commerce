@@ -49,7 +49,7 @@
           <div class="header">
             <div>Room</div>
             <div>Quantity</div>
-            <div>price</div>
+            <div>Price</div>
             <div>total</div>
           </div>
 
@@ -71,7 +71,7 @@
               <div class="row">
                 <div class="col-50">
                   <h3 class="header-pay">Guest </h3>
-                  <label>Guest Name</label>
+                  <label><i class="fas fa-user"></i> Guest Name</label>
                   <input required type="text" placeholder="John Doe" />
                   <label for="email"><i class="fa fa-envelope"></i> Email</label>
                   <input required type="email" placeholder="john@example.com" />
@@ -90,7 +90,7 @@
                 </div>
                 <div class="col-50">
                   <h3 class="header-pay">Payment</h3>
-                  <label for="ccn">CCN</label>
+                  <label for="ccn"><i class="fas fa-credit-card"> </i> CCN</label>
                   <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard()" autocomplete="cc-number" minlength= "19" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
                   <script>
                     function addDashCard() {
@@ -102,7 +102,7 @@
                       }
                     }
                   </script>
-                  <label for="expmonth">Exp Date</label>
+                  <label for="expmonth"><i class="fas fa-credit-card"> </i> Exp Date</label>
                   <input required type="text" id="expmonth" name="expmonth" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" maxlength="5" oninput="this.value=this.value.replace(/[^0-9\/]/g,'').replace(/(\d{2})\/?(\d{0,2}).*/,'$1/$2');" >                          
                   <label for="cvv"> <i class="fas fa-credit-card"> </i> CVV</label>
                   <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
