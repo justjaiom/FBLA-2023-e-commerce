@@ -4,7 +4,6 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: the_living_room,
     zoom: 15,
-    mapId: "8d193001f940fde3",
 
   });
 
@@ -68,20 +67,20 @@ function addPlaces(places, map) {
 
   for (const place of places) {
     if (place.geometry && place.geometry.location) {
-      let image = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25),
-      };
+      // let image = {
+      //   url: place.icon,
+      //   size: new google.maps.Size(71, 71),
+      //   origin: new google.maps.Point(0, 0),
+      //   anchor: new google.maps.Point(17, 34),
+      //   scaledSize: new google.maps.Size(25, 25),
+      // };
 
-      new google.maps.Marker({
-        map,
-        icon: image,
-        title: place.name,
-        position: place.geometry.location,
-      });
+      // new google.maps.Marker({
+      //   map,
+      //   icon: image,
+      //   title: place.name,
+      //   position: place.geometry.location,
+      // });
 
       const li = document.createElement("li");
       li.className = 'place'
