@@ -65,22 +65,15 @@ function setItems(product) {
   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
-function totalCost(product) {
-  let cartCost = localStorage.getItem("totalCost");
-  if (cartCost != null) {
-    cartCost = parseInt(cartCost);
-    localStorage.setItem("totalCost", cartCost + product.price);
-  } else {
-    localStorage.setItem("totalCost", product.price);
-  }
-}
-
 function displayCart() {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
   let productContainer = document.querySelector(".container");
   let cartCost = localStorage.getItem("totalCost");
   let total = document.querySelector(".total");
+  let screenWidth = window.innerWidth;
+  let fontSize = screenWidth > 768 ? "24px" : "16px"; 
+
   if (cartItems && productContainer) {
     productContainer.innerHTML = "";
     let totalPrice = 0;
@@ -102,9 +95,17 @@ function displayCart() {
     cartCost = totalPrice;
     localStorage.setItem("totalCost", cartCost);
     total.innerHTML = `
-      <div class='total'>$${cartCost}.00</div>`;
+      <div class='total' style="font-size: ${fontSize};">$${cartCost}.00</div>`;
   }
+
+
+  window.addEventListener("resize", function() {
+    screenWidth = window.innerWidth;
+    fontSize = screenWidth > 768 ? "24px" : "16px"; 
+    total.querySelector(".total").style.fontSize = fontSize;
+  });
 }
+
 
 function decrementItem(tag) {
   let cartItems = localStorage.getItem("productsInCart");
