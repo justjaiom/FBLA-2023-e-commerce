@@ -95,7 +95,7 @@ function displayCart() {
     cartCost = totalPrice;
     localStorage.setItem("totalCost", cartCost);
     total.innerHTML = `
-      <div class='total' style="font-size: ${fontSize};">$${cartCost}.00</div>`;
+      <div class='total' style="font-size: ${fontSize};">$${cartCost * 1.08}.00</div>`;
   }
 
 

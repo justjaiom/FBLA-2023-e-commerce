@@ -161,17 +161,21 @@ html {
 }
 
 .btn {
-  margin: 4px 0 16px 0;
+  margin-top:25px;
   padding: 12px 15px;
   border-radius: 5px;
   font-size: 17px;
   border: none;
   width: 100%;
+  background-color: #535756;
+    color: #fff;
+    border: 1px solid #fff;
+  
 }
 
 .btn:hover {
-  background-color: #535756;
-  color: white;
+  background-color: white;
+  color: #535756;
   transition: 20ms;
 }
 
