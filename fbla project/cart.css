@@ -292,3 +292,10 @@ label {
     color: white;
     transition: var(--transition);
 }
+
+@media screen and (max-width: 600px) {
+  .header div {
+    font-size: 0.2rem;
+    
+  }
+}
