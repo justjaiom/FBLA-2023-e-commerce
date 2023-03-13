@@ -72,7 +72,7 @@ function displayCart() {
   let cartCost = localStorage.getItem("totalCost");
   let total = document.querySelector(".total");
   let screenWidth = window.innerWidth;
-  let fontSize = screenWidth > 768 ? "24px" : "16px"; 
+  let fontSize = screenWidth > 768 ? "12px" : "24px"; 
 
   if (cartItems && productContainer) {
     productContainer.innerHTML = "";

@@ -275,7 +275,6 @@ label {
 }
 
 
-
 .decrement-btn, .increment-btn {
     width: 30px;
     height: 30px;
@@ -302,9 +301,3 @@ label {
     transition: var(--transition);
 }
 
-@media screen and (max-width: 600px) {
-  .header div {
-    font-size: 0.2rem;
-    
-  }
-}
