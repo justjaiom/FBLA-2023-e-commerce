@@ -74,18 +74,17 @@
                 <div class="col-50">
                   <h3 class="header-pay">Guest </h3>
                   <label><i class="fas fa-user"></i> Guest Name</label>
-                  <input required type="text" placeholder="John Doe" />
+                  <input required type="text" placeholder="John Doe" pattern="[A-Za-z]+" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" />
                   <label for="email"><i class="fa fa-envelope"></i> Email</label>
                   <input required type="email" placeholder="john@example.com" />
                   <label for="phone"><i class="fa fa-phone"></i> Phone</label>
-                  <input required type="tel" id="phone" onkeypress="addDashPhone()" placeholder="123-456-7890" maxlength="12" />
+                  <input required type="tel" id="phone" oninput="this.value = this.value.replace(/[^\d-]/g, ''); addDashPhone();" onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.key === '-';" placeholder="123-456-7890" maxlength="12" />
                   <script>
                     function addDashPhone() {
                       var inputValue = document.getElementById("phone").value;
                       var inputValueLength = inputValue.length;
                       if (inputValueLength == 3 || inputValueLength == 7) {
-                        document.getElementById("phone").value =
-                          inputValue + "-";
+                        document.getElementById("phone").value = inputValue + "-";
                       }
                     }
                   </script>
@@ -93,7 +92,7 @@
                 <div class="col-50">
                   <h3 class="header-pay">Payment</h3>
                   <label for="ccn"><i class="fas fa-credit-card"> </i> CCN</label>
-                  <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard()" autocomplete="cc-number" minlength= "19" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                  <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard(); return (event.charCode >= 48 && event.charCode <= 57);" autocomplete="cc-number" minlength= "19" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" >
                   <script>
                     function addDashCard() {
                       var inputValue = document.getElementById("ccn").value;
@@ -107,7 +106,7 @@
                   <label for="expmonth"><i class="fas fa-credit-card"> </i> Exp Date</label>
                   <input required type="text" id="expmonth" name="expmonth" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" maxlength="5" oninput="this.value=this.value.replace(/[^0-9\/]/g,'').replace(/(\d{2})\/?(\d{0,2}).*/,'$1/$2');" >                          
                   <label for="cvv"> <i class="fas fa-credit-card"> </i> CVV</label>
-                  <input required type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" />
+                  <input required type="text" id="cvv" name="cvv" oninput="this.value = this.value.replace(/[^\d]/g, '');" onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" placeholder="123" maxlength="3" />
                 </div>
               </div>
               <button class="btn" onclick="validateForm()">Submit</button>
