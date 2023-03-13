@@ -81,7 +81,7 @@ The following image was used for the Contact us form:
 
 ## Developement
 ### Code Used
-HTML, CSS, and JS were used for the frontend of the website. The living room stores it's data in a SQL database (PHPmyAdmin) and connects via php code. The entire E-business project, including code and website, was entirely created by Saptarishi Das and Jaiom Rola 
+HTML, CSS, and JS were used for the frontend of the website. The living room stores it's data in a SQL database (PHPmyAdmin) and connects via php code. The Self-developed SQL databases acts as a personal PMS (property management software). The entire E-business project, including code and website, was entirely created by Saptarishi Das and Jaiom Rola.
 
 ## Support accross all platforms 
 Our Website also has support for all forms of viewing. The Living Room is compatible with devices of all sizes and all OS's, and consistent improvements are being made for all.
@@ -92,6 +92,7 @@ Our Website also has support for all forms of viewing. The Living Room is compat
 ### Map of the Bed and Breakfast location 
 ### List of local attractions provided by google
 ### E-commerce tool to showing prices for different lodging types (in the rooms tab)
+### Self-developed Hotel PMS (property management software) 
 
 
 ## Team
