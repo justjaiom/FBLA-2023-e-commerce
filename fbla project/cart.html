@@ -29,11 +29,10 @@
     <div class="bg_img">
       <h1>Your Cart</h1>
     </div>
-    <form id = "cart_and_payment_form">
       <div style="display: grid; grid-template-columns: 60% 40%">
         <div>
           <div class="book">
-              <div class="book-form" onsubmit="setdate(event)">
+              <form class="book-form" onsubmit="setdate(event)">
                 <div class="form-item">
                   <label for="checkin_date">Check In Date: </label>
                   <input type="date" id="chekin-date" />
@@ -49,7 +48,7 @@
                 <div class="form-item">
                   <button  type="reset" class="btn" value="Reset" onclick="cleardate()">Reset</button>
                 </div>
-              </div>
+              </form>
           </div>
           <div class="parent">
             <div class="header">
@@ -141,7 +140,6 @@
         </div>
  
       </div>
-    </form>
     <footer class = "footer">
       <div class = "footer-container">
           <div>
