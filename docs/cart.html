@@ -1,0 +1,211 @@
+<html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <head>
+    <title>The Living Room - Cart</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="imgs/logo2.png" alt="The Living Room" class="title">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="info.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="bg_img">
+      <h1>Your Cart</h1>
+    </div>
+      <div style="display: grid; grid-template-columns: 60% 40%">
+        <div>
+          <div class="book">
+              <form class="book-form" onsubmit="setdate(event)">
+                <div class="form-item">
+                  <label for="checkin_date">Check In Date: </label>
+                  <input type="date" id="chekin-date" />
+                </div>
+                <div class="form-item">
+                  <label for="checkout_date">Check Out Date: </label>
+                  <input type="date" id="chekout-date" />
+                </div>
+
+                <div class="form-item">
+                  <button type="submit" class="btn" value="Book"> Book</button> 
+                </div>
+                <div class="form-item">
+                  <button  type="reset" class="btn" value="Reset" onclick="cleardate()">Reset</button>
+                </div>
+              </form>
+          </div>
+          <div class="parent">
+            <div class="header">
+              <div>Room</div>
+              <div>Quantity</div>
+              <div>Price</div>
+              <div>total</div>
+            </div>
+
+            <div class="container"></div>
+            
+            <div class="total">
+              
+              <div class="form-item">
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="payment-info">
+          <div class="row">
+            <div class="col-75">
+              <div class="container-pay">
+                <div class="row">
+                  <div class="col-50">
+                    <h3 class="header-pay">Guest </h3>
+                    <label><i class="fas fa-user"></i> Name</label>
+                    <input required type="text" placeholder="John Doe" pattern="[A-Za-z]+" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" />
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input required type="email" placeholder="john@example.com" />
+                    <label for="phone"><i class="fa fa-phone"></i> Phone</label>
+                    <input required type="tel" id="phone" oninput="this.value = this.value.replace(/[^\d-]/g, ''); addDashPhone();" onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.key === '-';" placeholder="123-456-7890" maxlength="12" />
+                    <script>
+                      function addDashPhone() {
+                        var inputValue = document.getElementById("phone").value;
+                        var inputValueLength = inputValue.length;
+                        if (inputValueLength == 3 || inputValueLength == 7) {
+                          document.getElementById("phone").value = inputValue + "-";
+                        }
+                      }
+                    </script>
+                  </div>
+                  <div class="col-50">
+                    <h3 class="header-pay">Payment</h3>
+                    <label for="ccn"><i class="fas fa-credit-card"> </i> CCN</label>
+                    <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard(); return (event.charCode >= 48 && event.charCode <= 57);" autocomplete="cc-number" minlength= "19" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" >
+                    <script>
+                      function addDashCard() {
+                        var inputValue = document.getElementById("ccn").value;
+                        var inputValueLength = inputValue.length;
+                        if (inputValueLength == 4 || inputValueLength == 9 || inputValueLength == 14) {
+                          document.getElementById("ccn").value =
+                            inputValue + "-";
+                        }
+                      }
+                    </script>
+                    <label for="expmonth"><i class="fas fa-credit-card"> </i> Exp Date</label>
+                    <input required type="text" id="expmonth" name="expmonth" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" maxlength="5" oninput="this.value=this.value.replace(/[^0-9\/]/g,'').replace(/(\d{2})\/?(\d{0,2}).*/,'$1/$2');" >                          
+                    <label for="cvv"> <i class="fas fa-credit-card"> </i> CVV</label>
+                    <input required type="text" id="cvv" name="cvv" oninput="this.value = this.value.replace(/[^\d]/g, '');" onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" placeholder="123" maxlength="3" />
+                  </div>
+                </div>
+                <button class="btn" onclick="validateForm()">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+        function validateForm() {
+          var inputs = document.getElementsByTagName("input");
+          for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].value == "") {
+              inputs[i].style.backgroundColor = "rgb(223, 55, 55)";
+              inputs[i].placeholder = "required";
+            } else {
+              inputs[i].style.backgroundColor = "white";
+            }
+          }
+        }
+        </script>
+
+
+        </style>
+        
+        
+          
+        </div>
+ 
+      </div>
+    <footer class = "footer">
+      <div class = "footer-container">
+          <div>
+              <h2>About Us </h2>
+              <p> The living room is a Bed & Breakfest located on the shores of Galveston Texas. We offer comfortable rooms with stunning views of Galveston's shoreline. Enjoy a delicious breakfast with fresh, locally sourced ingredients. Escape the city and recharge in our peaceful B&B for a romantic getaway. Come experience Galveston's beauty and tranquility. </p>
+              <ul class = "social-icons">
+                <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="airbnb" href="#"><i class="fab fa-airbnb"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li> 
+            </ul>
+          </div>
+  
+          <div>
+              <h2>Useful Links</h2>
+              <a href = "index.html">Home</a>
+              <a href = "rooms.html">Rooms</a>
+              <a href = "location.html">Location</a>
+              <a href = "cart.html">Cart</a>
+            <a href = "info.html">Contact Us</a>
+          </div>
+  
+          <div>
+              <h2>Privacy</h2>
+              <a href = "location.html">About</a>
+              <a href = "location.html">Location</a>
+              <a href = "#">Terms & Conditions</a>
+              <a href = "#">Privacy & Policy</a>
+          </div>
+  
+          <div>
+              <h2>Have A Question?</h2>
+              <div class = "contact-item">
+                  <span>
+                      <i class = "fas fa-map-marker-alt"></i>
+                  </span>
+                  <span>
+                    2402 Avenue Q 1/2, Galveston, TX 77550
+                  </span>
+              </div>
+              <div class = "contact-item">
+                  <span>
+                      <i class = "fas fa-phone-alt"></i>
+                  </span>
+                  <span>
+                      +512-123-1234
+                  </span>
+              </div>
+              <div class = "contact-item">
+                  <span>
+                      <i class = "fas fa-envelope"></i>
+                  </span>
+                  <span>
+                      info@thelivingroom.com
+                  </span>
+              </div>
+          </div>
+      </div>
+  </footer>
+    
+    <script src="cart.js"></script>
+    <script src="rooms.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    
+  </body>
+  
+</html>

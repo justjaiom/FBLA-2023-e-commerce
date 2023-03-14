@@ -1,0 +1,54 @@
+.grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    gap: 0px;
+    height: auto;
+}
+
+.container{
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+    width: 60%;
+    height: fit-content;
+    display: grid;
+}
+
+#return{
+    background-color: #535756;
+    color: #bdc093;
+    padding: .5rem;
+    border: none;
+    border-radius: 25px;
+}
+#return:hover{
+    color: white;
+}
+
+
+#map{
+    padding: 40px;
+    margin: 20px;
+}
+
+#more{
+    background-color: #535756;
+    color: #bdc093;
+    padding: .5rem;
+    border: none;
+    border-radius: 25px;
+}
+#more:hover{
+    color: white;
+}
+
+.place{
+    padding: 5px;
+  cursor: pointer;
+}
+
+.place:nth-child(odd) {
+    background-color: #bdc09335;
+  }

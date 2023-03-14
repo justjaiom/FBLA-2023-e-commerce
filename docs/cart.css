@@ -1,0 +1,303 @@
+:root {
+  --transition: all 0.7s ease;
+  --dark: #535756;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+  align-items: center;
+  width: 75%;
+  float: left;
+
+}
+
+.date_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+
+}
+
+.parent {
+
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  height: fit-content;
+  margin: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+
+.total {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+  .change {
+    display: block;
+}
+
+
+
+.center {
+  display: inline;
+
+}
+
+
+
+/* booking form */
+.book {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  color: #fff;
+  padding: 40px 60px;
+  border-radius: 25px;
+  margin: 40px;
+}
+
+.book-form {
+  display: grid;
+
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-form input[type="submit"] {
+  margin: 18px 0 0 0;
+  background: var(--dark);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.book-form input[type="reset"] {
+  margin: 18px 0 0 0;
+  background: var(--dark);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.book-form label,
+.book-form input {
+  width: 100%;
+}
+
+.book-form label {
+  font-weight: 600;
+  word-spacing: 5px;
+  padding-bottom: 8px;
+}
+
+.book-form input:not(.btn) {
+  margin: 4px 0 16px 0;
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: none;
+}
+
+.book-form input:active {
+  outline: 0;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+}
+
+@media(min-width: 768px) {
+  .book-form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+  }
+}
+
+@media(min-width: 1170px) {
+  .book-form {
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+  }
+
+  .book {
+    height: 40vh;
+    display: grid;
+  }
+}
+
+@media(min-width: 1370px) {
+  .book-form {
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+  }
+
+  .book {
+    height: 40vh;
+    display: grid;
+  }
+}
+
+@media(max-width: 500px) {
+  .book {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.btn {
+  margin-top:25px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: none;
+  width: 100%;
+  background-color: #535756;
+    color: #fff;
+    border: 1px solid #fff;
+  
+}
+
+.btn:hover {
+  background-color: white;
+  color: #535756;
+  transition: 20ms;
+}
+
+.btn:active{
+  background-color: white;
+  color: black;
+}
+
+
+
+/* ---------------------------------------------------------------- */
+
+.payment-info {
+  background:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  color: #bdc093;
+  border-radius: 25px;
+  margin: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+
+
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+
+.container-pay {
+  padding: 5px 20px 15px 20px;
+  border-radius: 3px;
+}
+
+.header-pay{
+  padding-bottom: 10px;
+
+}
+
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+
+.decrement-btn, .increment-btn {
+    width: 30px;
+    height: 30px;
+    background-color: var(--dark);
+    color: #bdc093;
+    border: none;
+    border-radius: 50%;
+    padding: 0px;
+    font-size: 1.2rem;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.decrement-btn:hover, .increment-btn:hover {
+    background-color: white;
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.decrement-btn:active, .increment-btn:active {
+    background-color: var(--dark);
+    color: white;
+    transition: var(--transition);
+}
+

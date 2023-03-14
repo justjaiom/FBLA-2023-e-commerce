@@ -1,0 +1,139 @@
+.body {
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+}
+
+.float_left {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+
+}
+
+.float_right {
+
+    float: right;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title {
+    background-color: #535756;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: url("imgs/bgimg.webp");
+    background-size: cover;
+    color: #535756;
+    padding: 20px;
+
+}
+
+form .half {
+    width: 100%;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    form .half {
+        width: 45%;
+    }
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #53575632;
+    background-color: rgba(250, 250, 250, 0.537);
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="subject"] {
+    height: 50px;
+}
+
+form textarea {
+    height: 150px;
+    resize: none;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background-color: #575753ca;
+    color: #e2d2b8;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#thanks{
+    text-align: center;;
+    margin-left: 25%;
+    width: 100px;
+    background-color: #535756;
+    color: #e2d2b8;
+    padding: 10px;
+    border-radius: 25px;
+
+}
+
+#map {
+    height: 50%;
+    width: 50%;
+    max-height: 400px;
+  }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  
+  .map-control {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+    font-family: "Roboto", "sans-serif";
+    margin: 10px;
+    padding-right: 5px;
+    visibility: hidden;
+    /* Hide the control initially, to prevent it from appearing
+             before the map loads. */
+    display: none;
+  }
+  
+  /* Display the control once it is inside the map. */
+  #map .map-control {
+    display: block;
+  }
+  
+  .selector-control {
+    font-size: 14px;
+    line-height: 30px;
+    vertical-align: baseline;
+  }
+
