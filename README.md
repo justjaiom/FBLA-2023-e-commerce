@@ -1,4 +1,5 @@
-# ![The Living Room](image_link)
+# ![The Living Room](imag![logo2](https://user-images.githubusercontent.com/90425309/225117767-954a8bb0-2e08-47ec-bf52-94169a2acd4a.png)
+e_link)
 # What are We?
 <table>
 <tr>
