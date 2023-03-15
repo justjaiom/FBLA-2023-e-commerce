@@ -212,7 +212,8 @@ justify-content: center;
 }
 
 .grid-item img {
-  max-width: 100%;
+  object-fit: cover;
+  width: 100%
 }
 
 .grid-item h3 {

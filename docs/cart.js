@@ -89,13 +89,16 @@ function displayCart() {
           <span>${item.incart}</span>
           <button class="increment-btn" onclick="incrementItem('${item.tag}', ${item.price})">+</button>
         </div>
-        <div class='price' style="text-align: center">$${item.price}.00</div>`;
+        <div class='price' style="text-align: center">$${item.price}.00</div>
+        <div class='total';">$${cartCost}.00</div>
+        `;
+        
     });
 
     cartCost = totalPrice;
     localStorage.setItem("totalCost", cartCost);
-    total.innerHTML = `
-      <div class='total' style="font-size: ${fontSize};">$${cartCost}.00</div>`;
+    // total.innerHTML = `
+    //   <div class='total' style="font-size: ${fontSize};">$${cartCost}.00</div>`;
   }
 
 
