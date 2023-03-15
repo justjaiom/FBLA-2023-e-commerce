@@ -101,6 +101,11 @@ function displayCart() {
     //   <div class='total' style="font-size: ${fontSize};">$${cartCost}.00</div>`;
   }
 
+  var widthofheader = document.getElementById('setwidth').offsetWidth;
+  console.log(widthofheader)
+  document.getElementById("getwidth").style.width = widthofheader;
+
+
 
   window.addEventListener("resize", function() {
     screenWidth = window.innerWidth;
