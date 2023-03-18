@@ -17,6 +17,7 @@ We take copyright laws seriously at The Living Room Bed and Breakfast. All copyr
 - [Font Awesome Library](https://fontawesome.com/docs)
 - [Google Places API](https://developers.google.com/maps/documentation/javascript/places)
 - [Google maps API](https://developers.google.com/maps/documentation/javascript) 
+- [Fetch API](ttps://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 
 
 
 ## Images
