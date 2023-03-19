@@ -96,6 +96,8 @@ Our Website also has support for all forms of viewing. The Living Room is compat
 ### List of local attractions provided by google
 ### E-commerce tool to showing prices for different lodging types (in the rooms tab)
 ### Self-developed Hotel PMS (property management software) 
+### Industry standard HTTP requests
+### SQL storage
 
 
 ## Team

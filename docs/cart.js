@@ -151,7 +151,22 @@ function setdate(event) {
   localStorage.setItem("checkout_date", checkout_date);
 }
 
+function phpdata(event){
+  event.preventDefault()
+  var gname = document.getElementById('gname').value;
+  var email = document.getElementById('email').value;
+  var phone = document.getElementById('phone').value;
+  var cnn = document.getElementById('ccn').value;
+  var expmonth = document.getElementById('expmonth').value;
+  var cvv = document.getElementById('cvv').value;
 
+  localStorage.setItem("gname", gname);
+  localStorage.setItem("email", email);
+  localStorage.setItem("phone", phone);
+  localStorage.setItem("cnn", cnn);
+  localStorage.setItem("expmonth", expmonth);
+  localStorage.setItem("cvv", cvv);
+}
 
 
 function cleardate() {
