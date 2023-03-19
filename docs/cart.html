@@ -69,67 +69,121 @@
             </div>
           </div>
         </div>
-        <form class="payment-info">
-          <div class="row">
-            <div class="col-75">
-              <div class="container-pay">
-                <div class="row">
-                  <div class="col-50">
-                    <h3 class="header-pay">Guest </h3>
-                    <label><i class="fas fa-user"></i> Name</label>
-                    <input required type="text" placeholder="John Doe"  />
-                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                    <input required type="email" placeholder="john@example.com" />
-                    <label for="phone"><i class="fa fa-phone"></i> Phone</label>
-                    <input required type="tel" id="phone" oninput="this.value = this.value.replace(/[^\d-]/g, ''); addDashPhone();" onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.key === '-';" placeholder="123-456-7890" maxlength="12" />
-                    <script>
-                      function addDashPhone() {
-                        var inputValue = document.getElementById("phone").value;
-                        var inputValueLength = inputValue.length;
-                        if (inputValueLength == 3 || inputValueLength == 7) {
-                          document.getElementById("phone").value = inputValue + "-";
+        <form id="myForm">
+          <div class="payment-info">
+            <div class="row">
+              <div class="col-75">
+                <div class="container-pay">
+                  <div class="row">
+                    <div class="col-50">
+                      <h3 class="header-pay">Guest </h3>
+                      <label><i class="fas fa-user"></i> Name</label>
+                      <input required type="text" id="gname" placeholder="John Doe" pattern="[A-Za-z ]+" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode == 32" />
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input required type="email" id="email" placeholder="john@example.com" />
+                      <label for="phone"><i class="fa fa-phone"></i> Phone</label>
+                      <input required type="tel" id="phone" oninput="this.value = this.value.replace(/[^\d-]/g, ''); addDashPhone();" onkeypress="return (event.charCode >= 48 && event.charCode <= 57) || event.key === '-';" placeholder="123-456-7890" maxlength="12" />
+                      <script>
+                        function addDashPhone() {
+                          var inputValue = document.getElementById("phone").value;
+                          var inputValueLength = inputValue.length;
+                          if (inputValueLength == 3 || inputValueLength == 7) {
+                            document.getElementById("phone").value = inputValue + "-";
+                          }
                         }
-                      }
-                    </script>
-                  </div>
-                  <div class="col-50">
-                    <h3 class="header-pay">Payment</h3>
-                    <label for="ccn"><i class="fas fa-credit-card"> </i> CCN</label>
-                    <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard(); return (event.charCode >= 48 && event.charCode <= 57);" autocomplete="cc-number" minlength= "19" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" >
-                    <script>
-                      function addDashCard() {
-                        var inputValue = document.getElementById("ccn").value;
-                        var inputValueLength = inputValue.length;
-                        if (inputValueLength == 4 || inputValueLength == 9 || inputValueLength == 14) {
-                          document.getElementById("ccn").value =
-                            inputValue + "-";
+                      </script>
+                    </div>
+                    <div class="col-50">
+                      <h3 class="header-pay">Payment</h3>
+                      <label for="ccn"><i class="fas fa-credit-card"> </i> CCN</label>
+                      <input required id="ccn" type="tel" inputmode="numeric" onkeypress="addDashCard(); return (event.charCode >= 48 && event.charCode <= 57);" autocomplete="cc-number" minlength= "19" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" >
+                      <script>
+                        function addDashCard() {
+                          var inputValue = document.getElementById("ccn").value;
+                          var inputValueLength = inputValue.length;
+                          if (inputValueLength == 4 || inputValueLength == 9 || inputValueLength == 14) {
+                            document.getElementById("ccn").value =
+                              inputValue + "-";
+                          }
                         }
-                      }
-                    </script>
-                    <label for="expmonth"><i class="fas fa-credit-card"> </i> Exp Date</label>
-                    <input required type="text" id="expmonth" name="expmonth" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" maxlength="5" oninput="this.value=this.value.replace(/[^0-9\/]/g,'').replace(/(\d{2})\/?(\d{0,2}).*/,'$1/$2');" >                          
-                    <label for="cvv"> <i class="fas fa-credit-card"> </i> CVV</label>
-                    <input required type="text" id="cvv" name="cvv" oninput="this.value = this.value.replace(/[^\d]/g, '');" onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" placeholder="123" maxlength="3" />
+                      </script>
+                      <label for="expmonth"><i class="fas fa-credit-card"> </i> Exp Date</label>
+                      <input required type="text" id="expmonth" name="expmonth" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" maxlength="5" oninput="this.value=this.value.replace(/[^0-9\/]/g,'').replace(/(\d{2})\/?(\d{0,2}).*/,'$1/$2');" >                          
+                      <label for="cvv"> <i class="fas fa-credit-card"> </i> CVV</label>
+                      <input required type="text" id="cvv" name="cvv" oninput="this.value = this.value.replace(/[^\d]/g, '');" onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" placeholder="123" maxlength="3" />
+                    </div>
                   </div>
+                  <button class="btn" onclick="validateForm()">Submit</button>
                 </div>
-                <button class="btn" type="submit" onclick="validateForm()">Submit</button>
               </div>
             </div>
           </div>
         </form>
-        
         <script>
         function validateForm() {
-          var inputs = document.getElementsByTagName("input");
-          for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].value == "") {
-              inputs[i].style.backgroundColor = "rgb(223, 55, 55)";
-              // inputs[i].placeholder = "required";
-            } else {
-              inputs[i].style.backgroundColor = "white";
+            var inputs = document.getElementsByTagName("input");
+            var data = {};
+            var validForm = true; // flag variable
+
+            for (var i = 0; i < inputs.length; i++) {
+              if (inputs[i].value == "") {
+                inputs[i].style.backgroundColor = "rgb(223, 55, 55)";
+                inputs[i].placeholder = "required";
+                validForm = false; // set flag to false if any input is empty
+              } else {
+                inputs[i].style.backgroundColor = "white";
+                data[inputs[i].id] = inputs[i].value;
+                localStorage.setItem(inputs[i].id, inputs[i].value); // set value to local storage
+              }
             }
+
+            if (!validForm) {
+              return; // exit function if any input is empty
+            }
+
+            var checkin_date = localStorage.getItem("checkin_date");
+            var checkout_date = localStorage.getItem("checkout_date");
+            var cartCost = localStorage.getItem("totalCost");
+            var gname = localStorage.getItem("gname");
+            var email = localStorage.getItem("email");
+            var phone = localStorage.getItem("phone");
+            var ccn = localStorage.getItem("ccn");
+            var expmonth = localStorage.getItem("expmonth");
+            var cvv = localStorage.getItem("cvv");
+
+            data['gname'] = gname;
+            data['email'] = email;
+            data['phone'] = phone;  
+            data['ccn'] = ccn;
+            data['expmonth'] = expmonth;
+            data['cvv'] = cvv;  
+            data['checkin_date'] = checkin_date;
+            data['checkout_date'] = checkout_date;
+            data['cartCost'] = cartCost;                
+            console.log(data);
+            sendData(data);
+            alert('Thank You, for your purchase!')
           }
+
+        
+
+        function sendData(data) {
+          fetch('http://localhost/myproject/checkout.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)            
+          })
+          .then(response => {
+            console.log('Success:', response);            
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+          
         }
+
         </script>
 
 
