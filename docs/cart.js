@@ -122,6 +122,9 @@ function decrementItem(tag) {
   if (cartItems[tag].incart > 0) {
     cartItems[tag].incart -= 1;
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+    let cartCost = parseInt(localStorage.getItem("totalCost"));
+    cartCost -= cartItems[tag].price;
+    localStorage.setItem("totalCost", cartCost);
     displayCart();
   }
 }
