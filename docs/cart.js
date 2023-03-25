@@ -90,7 +90,7 @@ function displayCart() {
           <button class="increment-btn" onclick="incrementItem('${item.tag}', ${item.price})">+</button>
         </div>
         <div class='price' style="text-align: center">$${item.price}.00</div>
-        <div class='total';">$${cartCost}.00</div>
+        <div class='total'id='grid-total';">$${cartCost}.00</div>
         `;
         
     });
@@ -102,10 +102,11 @@ function displayCart() {
   }
 
   var widthofheader = document.getElementById('setwidth').offsetWidth;
-  console.log(widthofheader)
   document.getElementById("getwidth").style.width = widthofheader;
 
-
+  var widthoftotal = document.getElementById ('grid-total').offsetWidth
+  document.getElementById('cover').style.padding = widthoftotal/2 
+  document.getElementById('cover').style.height = 300
 
   window.addEventListener("resize", function() {
     screenWidth = window.innerWidth;
@@ -177,3 +178,4 @@ function cleardate() {
 function refreshPage() {
   window.location.reload();
 }
+

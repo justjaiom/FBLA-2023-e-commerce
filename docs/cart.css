@@ -42,6 +42,7 @@ vertical-align: middle;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
+  position: relative;
 }
 
 .header {
@@ -323,3 +324,12 @@ label {
   transition: var(--transition);
 }
 
+.cover{
+  background-color: white;
+  position: absolute;
+  right: 5;
+  top: 174;
+  width: 50;
+  padding-bottom: 100;
+  overflow: hidden;
+}
