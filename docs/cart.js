@@ -73,6 +73,8 @@ function displayCart() {
   let total = document.querySelector(".total");
   let screenWidth = window.innerWidth;
   let fontSize = screenWidth > 768 ? "12px" : "24px"; 
+  let taxed = localStorage.getItem("totalCost") * 1.0825 //cart cost rounded
+  let rounded_cart = Math.round((taxed + Number.EPSILON) * 100)/100
 
   if (cartItems && productContainer) {
     productContainer.innerHTML = "";
@@ -90,7 +92,7 @@ function displayCart() {
           <button class="increment-btn" onclick="incrementItem('${item.tag}', ${item.price})">+</button>
         </div>
         <div class='price' style="text-align: center">$${item.price}.00</div>
-        <div class='total'id='grid-total';">$${cartCost}.00</div>
+        <div class='total'id='grid-total';">$${rounded_cart}</div>
         `;
         
     });
