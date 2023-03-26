@@ -90,7 +90,7 @@ function displayCart() {
           <button class="increment-btn" onclick="incrementItem('${item.tag}', ${item.price})">+</button>
         </div>
         <div class='price' style="text-align: center">$${item.price}.00</div>
-        <div class='total'id='grid-total';">$${cartCost}.00</div>
+        <div class='total'id='grid-total';">$${(cartCost * 1.0825).toFixed(2)}</div>
         `;
         
     });
