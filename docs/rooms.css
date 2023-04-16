@@ -37,13 +37,36 @@ body {
 
 .btn:hover {
     background-color: #bdc093;
-    transition: 20ms;
+    transition: .2s;
 }
 
 .btn:active {
     background-color: #535756;
-    transition: 20ms;
+    transition: .2s;
 }
+.room-btn {
+    margin-top: 25px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    border: none;
+    width: 100%;
+    background-color: #535756;
+    color: #fff;
+    border: 1px solid #fff;
+  
+  }
+  
+  .room-btn:hover {
+    background-color: white;
+    color: #535756;
+    transition: .2s;
+  }
+  
+  .room-btn:active {
+    background-color: white;
+    color: black;
+  }
 
 .flex {
     display: flex;
