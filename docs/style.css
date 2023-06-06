@@ -77,9 +77,7 @@ html{
 }
 
 @media only screen and (width<= 768px) {
-  .hero{
 
-  }
   .home-grid {
     display: flex;
     margin: auto;
