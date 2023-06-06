@@ -78,12 +78,12 @@ html{
 
 @media only screen and (width<= 768px) {
   .hero{
-    max-height: 30vh;
+
   }
   .home-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    margin: auto;
     text-align: center;
-    max-height: 30vh;
   }
 
   .home-text {
