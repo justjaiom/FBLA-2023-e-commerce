@@ -2,6 +2,10 @@
 
 *{
   transition: .2s;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 :root{
   --dark: #535756;
@@ -11,6 +15,63 @@
 html{
   scroll-behavior: smooth;
   text-size-adjust: 90%;
+}
+
+.hero{
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.container{
+  width: 100%;
+  /* max-width: 1440px; */
+  display: flex;
+  justify-content: center;
+  margin-right: 5%;
+  
+}
+
+.home-grid{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+}
+
+.home-text{
+  padding-left: 100px;
+  line-height: 3rem;
+}
+
+.home-text span{
+  color: rgb(189, 192, 147);;
+}
+.home-text p{
+  color: rgb(83, 87, 86);;
+  margin-top: 20px;
+  max-width: 350px;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+.home-text h1{
+  color: black;
+    font-size: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.home-img{
+  width: fit-content;
+  
+}
+
+.minimize{
+  width: 120%;
+  border-radius: 20px;
 }
 
 
