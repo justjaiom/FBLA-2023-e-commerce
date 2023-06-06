@@ -14,65 +14,93 @@
 
 html{
   scroll-behavior: smooth;
-  text-size-adjust: 90%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.hero{
+.hero {
   height: 80vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  
 }
 
-.container{
+.container {
   width: 100%;
-  /* max-width: 1440px; */
+  max-width: 1440px;
   display: flex;
   justify-content: center;
-  margin-right: 5%;
-  
 }
 
-.home-grid{
+.home-grid {
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
+  gap: 20px;
+  max-height: 80vh;
+  margin-right: 5vh;
 }
 
-.home-text{
+.home-text {
   padding-left: 100px;
   line-height: 3rem;
 }
 
-.home-text span{
-  color: rgb(189, 192, 147);;
+.home-text span {
+  color: rgb(189, 192, 147);
 }
-.home-text p{
-  color: rgb(83, 87, 86);;
+
+.home-text p {
+  color: rgb(83, 87, 86);
   margin-top: 20px;
   max-width: 350px;
   line-height: 2rem;
   font-size: 1.5rem;
 }
-.home-text h1{
+
+.home-text h1 {
   color: black;
-    font-size: 2.5rem;
-    width: 100%;
-    max-width: 400px;
-    font-weight: 800;
-    font-size: 2.5rem;
+  font-size: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  font-weight: 800;
+  font-size: 2.5rem;
 }
 
-.home-img{
-  width: fit-content;
-  
+.home-img {
+  width: 100%;
 }
 
-.minimize{
-  width: 120%;
+.minimize {
+  width: 100%;
   border-radius: 20px;
 }
+
+@media only screen and (width<= 768px) {
+  .hero{
+    max-height: 30vh;
+  }
+  .home-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    max-height: 30vh;
+  }
+
+  .home-text {
+    padding: 0 20px;
+  }
+
+  .home-img {
+    display: none;
+  }
+
+  .minimize {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 
 #map {
@@ -100,6 +128,7 @@ header {
   padding: 1rem;
   background-color: #535756;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 
