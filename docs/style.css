@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 :root{
   --dark: #535756;
+  --transition: all 0.7s ease;
 }
 
 html{
@@ -56,6 +57,7 @@ nav a {
 
 nav a:hover {
   color: #ffffff;
+  transition: 0.2s ease;
 }
 
 
@@ -78,12 +80,13 @@ nav a:hover {
   background-color: #535756;
   color: #bdc093;
   border-color: transparent;
+  transition: 0.2s ease;
 }
 
 .hover:hover{
   background-color: #bdc093;
   color: #535756;
-
+  transition: 0.3s ease;
 }
 
 #container {
@@ -209,12 +212,27 @@ justify-content: center;
   text-align: center;
   border-radius: 20px;
   min-width: fit-content;
-  
+
+}
+
+.grid-item {
+  transition: 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+.grid-item:not(:hover) {
+  /* opacity: 0.7; */
+  transform: scale(1);
 }
 
 .grid-item img {
   object-fit: cover;
-  width: 100%
+  width: 100%;
+  border-radius: 10px;
 }
 
 .grid-item h3 {
@@ -236,6 +254,7 @@ justify-content: center;
 .food-btn:hover {
   background-color: #bdc093;
   color: #535756;
+  transition: 0.2s ease;
 }
 
 .food-btn:active{

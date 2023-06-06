@@ -262,6 +262,12 @@ img {
     border: 1px solid #fff;
 }
 
+.book-form input:hover{
+    background-color: #fff;
+    color: #bdc093;
+    transition: 0.3s ease;
+}
+
 .book-form label,
 .book-form input {
     width: 100%;
